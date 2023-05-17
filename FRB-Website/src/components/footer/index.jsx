@@ -2,31 +2,32 @@ import { FooterStyle } from "./styled/";
 import logo from "../../assets/img/FRB.png"
 import { GrInstagram } from "react-icons/gr"
 import { GrLinkedinOption } from "react-icons/gr"
+import { MenuContainer } from "../menuBox/menuContainer"
 
 export const Footer = () => {
   return (
     <FooterStyle>
-      <div>
-        <h3>Email para contato</h3>
-        <p>email@email.com</p>
+      <div className="footerBox">
+        <div>
+          <h3>Email para contato</h3>
+          <p>email@email.com</p>
 
-        <h3>Telefone para contato</h3>
-        <p>(xx)xxxxx-xxxx</p>
-
-        <h3>Sobre</h3>
-        <p>Quem somos</p>
-        <p>Área do cliente</p>
-        <p>Nosso diferencial</p>
-        <p>Contato</p>
-        <p>Benefícios</p>
-
-        <h3>Siga-nos</h3>
-        <div className="icons">
-          <GrInstagram/>
-          <GrLinkedinOption/>
+          <h3>Telefone para contato</h3>
+          <p>(xx)xxxxx-xxxx</p>
+        </div>
+        <div className="about">
+          <h3>Sobre</h3>
+          <MenuContainer />
+        </div>
+        <div>
+          <h3>Siga-nos</h3>
+          <div className="icons">
+            <GrInstagram />
+            <GrLinkedinOption />
+          </div>
         </div>
       </div>
-        <img src={logo} alt="logo FRB" onClick={()=>{window.scrollTo({top:0,behavior: "smooth"})}} />
+      <img src={logo} alt="logo FRB" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }) }} />
     </FooterStyle>
   );
 };

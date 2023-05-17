@@ -14,5 +14,9 @@ padding: 32px 16px;
 width: 40%;
 height: max-content;
 
+a{
+    width: max-content;
+    
+}
 
 `

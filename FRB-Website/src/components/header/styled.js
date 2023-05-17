@@ -7,7 +7,13 @@ height: 100px;
 display: flex;
 align-items: center;
 justify-content: center;
-position: relative;
+position: sticky;
+top: 0;
+left: 0;
+z-index: 2;
+
+background-color: var(--color-grey-1);
+box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.3);
 
 .container{
     width: 100%;
