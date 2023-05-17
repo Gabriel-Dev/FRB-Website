@@ -14,11 +14,21 @@ html, body, figure, img, div, section, article, input, button,span, textarea, p,
     text-decoration: none; 
   } 
 
+body{
+    font-family: 'Inter', sans-serif;
+}
+
 button{  
     cursor: pointer;        
     border: none;        
     background: transparent;    
+}
+
+a{  color: unset;        
+    text-decoration: none; 
+    font-weight: 700;
 } 
+
 
 :root {
     --color-primary-1: #134777;

@@ -18,24 +18,29 @@ export const WhoWeAre = () => {
                 <div className="handsImg">
                     <img src={hands} alt="imagens relacionadas a medicina" />
                 </div>
+                <section>
                 <div className="whyFRB">
                     <h3>Por que a FRB?</h3>
-                    <p>
-                        Nossa reputação sólida e expertise no setor são fundamentais para construir confiança.
-                    </p>
-                    <p>
-                        Ao longo dos anos, estabelecemos um nome de confiança como provedores de serviços de proteção financeira.
-                    </p>
-                    <p>
-                        Quando você escolhe nossa empresa, você escolhe a tranquilidade de saber que sua família estará protegida por uma equipe experiente e dedicada.
-                    </p>
+                    <div>
+                        <p>
+                            Nossa reputação sólida e expertise no setor são fundamentais para construir confiança.
+                        </p>
+                        <p>
+                            Ao longo dos anos, estabelecemos um nome de confiança como provedores de serviços de proteção financeira.
+                        </p>
+                        <p>
+                            Quando você escolhe nossa empresa, você escolhe a tranquilidade de saber que sua família estará protegida por uma equipe experiente e dedicada.
+                        </p>
+                    </div>
                 </div>
+                </section>
                 <div className="fatherImg" >
                     <div>
                         <img src={father} alt="imagem pai e filha" />
                         <p>Nossa prioridade é o seu bem-estar.</p>
                     </div>
                 </div>
+                <section>
                 <ul className="cardList">
                     <li>
                         <img src={stethoscope} alt="Gestão Integrada de Saúdescópio" />
@@ -68,6 +73,7 @@ export const WhoWeAre = () => {
                         <p>Acolhimento e atendimento humanizado para seus colaboradores. Acompanhamento de casos clínicos complexos.</p>
                     </li>
                 </ul>
+            </section>
             </Main>
             <Footer/>
         </>
