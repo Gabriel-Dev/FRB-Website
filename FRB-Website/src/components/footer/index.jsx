@@ -15,9 +15,10 @@ export const Footer = () => {
 
         <h3>Sobre</h3>
         <p>Quem somos</p>
+        <p>Área do cliente</p>
         <p>Nosso diferencial</p>
         <p>Contato</p>
-        <p>Área do cliente</p>
+        <p>Benefícios</p>
 
         <h3>Siga-nos</h3>
         <div className="icons">
