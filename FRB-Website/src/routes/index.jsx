@@ -1,11 +1,11 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import { WeAre } from "../pages/WeAre";
+import { WhoWeAre } from "../pages/whoWeAre";
 import { OurDifferential } from "../pages/OurDifferential";
 
 export const MainRoutes = ()=> {
     return (
         <Routes>
-            <Route path="QuemSomos" element={<WeAre />} />
+            <Route path="QuemSomos" element={<WhoWeAre />} />
             <Route path="NossoDiferencial" element={<OurDifferential />} />
             <Route path="*" element={<Navigate to={"QuemSomos"} />} />
         </Routes>

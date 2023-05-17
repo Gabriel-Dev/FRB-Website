@@ -8,6 +8,15 @@ export const Header = () => {
       <div>
         <img src={logo} alt="logo FRB" />
         <FiMenu/>
+        <div className="boxMenu">
+          <p className="menu">menu</p>
+          <p className="close">x</p>
+          
+          <p>Área do cliente</p>
+          <p>Nosso diferencial</p>
+          <p>Contato</p>
+          <p>Benefícios</p>
+        </div>
       </div>
     </HeaderStyle>
   );
