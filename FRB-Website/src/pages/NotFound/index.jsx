@@ -1,5 +1,4 @@
 
-import React from "react";
 import FRB from "../../assets/img/FRB.png"
 
 import { StyledNotFound } from "./style";
