@@ -7,7 +7,7 @@ height: 100%;
 img{
     width: 100%;
     height: 250px;
-    
+    object-fit: cover;
 }
 .positionText{
     display: flex;
@@ -43,7 +43,7 @@ font-weight: 300;
     position: relative;
     bottom: 2%;
     
-    height: 350px;
+    height: 400px;
     width: 50%;
 }
 .positionImg{

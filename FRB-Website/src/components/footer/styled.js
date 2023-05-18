@@ -4,7 +4,7 @@ export const FooterStyle = styled.footer`
 width: 100%;
 height: max-content;
 background-color: var(--color-secondary);
-color: var(--color-grey-1);
+color: var(--color-white-1);
 position: relative;
 
 .footerBox{
@@ -15,11 +15,11 @@ position: relative;
     padding: 16px 32px;
 
     h3{
-    margin: 16px 0;
+        margin: 16px 0;
     }
 
     a{ 
-     font-weight: 500;
+        font-weight: 500;
     }
 
     .about{
