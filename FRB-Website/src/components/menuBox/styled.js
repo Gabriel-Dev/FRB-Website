@@ -14,7 +14,7 @@ export const MenuStyle = styled.div`
     width: 40%;
     height: max-content;
     
-    background-color: var(--color-grey-1);
+    background-color: var(--color-white-1);
     box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.5);
     border-radius: 4px;
 
@@ -39,6 +39,8 @@ export const MenuStyle = styled.div`
         left: 16px;
         top: 20px;
     }
+
+   
 
 
 `
