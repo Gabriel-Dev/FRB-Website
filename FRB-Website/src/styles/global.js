@@ -40,8 +40,8 @@ a{  color: unset;
     --color-purple: #3741F5;
     --color-grey-0: #000000;
     --color-grey-05: #00000005;
-    --color-grey-1: #FFFFFF;
-    --color-grey-2: #F8F8F8;
+    --color-white-1: #FFFFFF;
+    --color-white-2: #F8F8F8;
 
 
     --color-negative: #E60000;
