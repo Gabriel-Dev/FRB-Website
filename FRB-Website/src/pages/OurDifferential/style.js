@@ -65,8 +65,9 @@ height: 245px;
 }
 .positionText{
     width: 50%;
-padding: 0;
+
 gap: 0;
+display: flex;
 }
 p{
  padding :20px ;
