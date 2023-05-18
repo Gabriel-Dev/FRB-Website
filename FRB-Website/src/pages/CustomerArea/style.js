@@ -10,6 +10,7 @@ export const Main = styled.main`
     padding: 30px;
   }
   .imgIconBack {
+    cursor: pointer;
   }
   .positionLogo {
     width: 100%;

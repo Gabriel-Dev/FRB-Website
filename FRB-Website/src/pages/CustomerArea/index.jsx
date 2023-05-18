@@ -9,11 +9,8 @@ export const CustomerArea = () => {
         
       <div className="positionDesk">
         <div className="positionIconBack">
-          <img
-            className="imgIconBack"
-            src={backLogin}
-            alt="Icone para Voltar"
-          />
+          <img className="imgIconBack" src={backLogin} alt="Icone para Voltar"
+          onClick={()=>{window.history.back()}}/>
         </div>
             
         <div className="positionLogo">

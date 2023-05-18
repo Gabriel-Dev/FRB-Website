@@ -12,7 +12,6 @@ top: 0;
 left: 0;
 z-index: 2;
 
-
 .container{
     width: 1440px;
     height: 100%;
