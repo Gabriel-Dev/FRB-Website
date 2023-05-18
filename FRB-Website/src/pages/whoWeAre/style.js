@@ -84,8 +84,8 @@ section{
         position: absolute;
         bottom: 50px;
         right: 0px;
+        z-index: 2;
     }
-
 }
 
 .cardList{
@@ -131,7 +131,7 @@ section{
         max-width: 1440px;
     }
     .handsImg{
-        height: 600px;
+        height: 800px;
     }
     .whyFRB{
         height: 300px;
@@ -144,7 +144,7 @@ section{
             width: 50%;
             text-align: center;
         }
-        
+
         div{
             height: 80%;
             align-items: center;
@@ -166,7 +166,6 @@ section{
             max-width: 1440px;
             height: 300px;
             position: relative;
-
             img{
                 height: 380px;
                 width: 600px;
@@ -175,7 +174,6 @@ section{
                 left: 0;
                 z-index: 1;  
             }
-
             p{
                 font-size: 36px;
                 bottom: 120px;

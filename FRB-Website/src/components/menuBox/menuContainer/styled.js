@@ -1,22 +1,15 @@
 import styled from "styled-components";
 
 export const MenuStyle = styled.div`
-width: 100%;
-height: 100%;
-
+width: 70%;
+height: max-content;
 display: flex;
 align-items: center;
-justify-content: center;
-
+justify-content: flex-end;
 gap: 24px;
 padding: 32px 16px;
 
-width: 40%;
-height: max-content;
-
 a{
-    width: max-content;
-    
+    font-weight: 500;
 }
-
 `
