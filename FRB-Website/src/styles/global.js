@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 
-html, body, figure, img, div, section, article, input, button,span, textarea, p, h1, h2, h3, h4, h5, h6, a, ul, li, ol, footer, aside, form, header, label, select, option{
+html, body, figure, img, div, section, article, input, button,span, textarea, p, h1, h2, h3, h4, h5, h6, a, ul, li, ol, footer, aside, form, header, label, select, option, main{
     margin: 0;
     padding: 0;
     border: 0;
@@ -10,7 +10,9 @@ html, body, figure, img, div, section, article, input, button,span, textarea, p,
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     list-style: none;
-    font-family: 'Inter', sans-serif;
+ /* font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito', sans-serif; */
+    font-family: 'Roboto', sans-serif;
     text-decoration: none; 
   } 
 
@@ -35,7 +37,7 @@ a{  color: unset;
     --color-primary-2: #0070BA;
     --color-primary-3: #04ADE0;
     --color-secondary: #05162B;
-
+    --color-purple: #3741F5;
     --color-grey-0: #000000;
     --color-grey-05: #00000005;
     --color-grey-1: #FFFFFF;
