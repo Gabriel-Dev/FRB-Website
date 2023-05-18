@@ -157,7 +157,7 @@ margin-bottom:15%
 @media(min-width:768px){
   .positionCard{
     width: 100%;
-    overflow-x:none;
+    overflow-x:hidden;
   }
   .widthbox{
 width: 100%;
