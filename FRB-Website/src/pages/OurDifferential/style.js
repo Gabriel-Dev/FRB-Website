@@ -22,23 +22,27 @@ img{
 .article{
 font-weight: 300;
 }
+.imgzeal{
+    position: relative;
+    top: 4px;
+}
 @media(min-width:768px){
 
     .imgIntro{
         height: 600px;
-        min-width:958px;
+        
     }
 
 
 .positionCard{
     display: flex;   
     width: 100%;
-    min-width:958px;
+    
 }
 .imgCard{
     position: relative;
     bottom: 2%;
-    min-width:476.8px;
+    
     height: 350px;
     width: 50%;
 }
@@ -72,6 +76,9 @@ p{
     position: relative;
     top: 4px;
 }
-
+.imgzeal{
+    position: relative;
+    top: 0px;
+}
 }
 `

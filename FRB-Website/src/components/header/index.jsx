@@ -1,23 +1,30 @@
 import { HeaderStyle } from "./styled";
-import { FiMenu } from "react-icons/fi"
 import logo from "../../assets/img/FRB.png"
+import { MenuBox } from "../menuBox"
+import { MenuContainer } from "../menuBox/menuContainer"
+import { useState , useEffect} from "react"
 
 export const Header = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+    window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <HeaderStyle>
-      <div>
+      <div className="container">
         <img src={logo} alt="logo FRB" />
-        <FiMenu/>
-        <div className="boxMenu">
-          <p className="menu">menu</p>
-          <p className="close">x</p>
-          
-          <p>Área do cliente</p>
-          <p>Nosso diferencial</p>
-          <p>Contato</p>
-          <p>Benefícios</p>
-        </div>
+        {windowWidth > 768 ? <MenuContainer/>: <MenuBox/>}
       </div>
     </HeaderStyle>
   );
-};
+  };

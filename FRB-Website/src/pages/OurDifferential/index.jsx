@@ -32,7 +32,7 @@ export const OurDifferential = ()=> {
                 <img  className="imgCard" src={technology} alt="Imagem sobre agilidade" />
             </div>
             <div className="positionCard">
-            <div className="positionText"><p className="purple">Zelo</p><p className="article"> Proteger  seus colaboradores e seus respectivos  familiares  é um investimento valioso . Com a FRB você está fazendo mais do que apenas escolher uma consutoria, está escolhendo tranquilidade, segurança e um parceiro confiável para enfrentar os desafios e buscar o melhor custo benefico para a sua empresa.</p></div><img className="imgCard" src={zeal} alt="Imagem sobre agilidade" /></div>
+            <div className="positionText"><p className="purple">Zelo</p><p className="article"> Proteger  seus colaboradores e seus respectivos  familiares  é um investimento valioso . Com a FRB você está fazendo mais do que apenas escolher uma consutoria, está escolhendo tranquilidade, segurança e um parceiro confiável para enfrentar os desafios e buscar o melhor custo benefico para a sua empresa.</p></div><img className="imgCard imgzeal" src={zeal} alt="Imagem sobre agilidade" /></div>
         </Main>
         <Footer/>
         </>
