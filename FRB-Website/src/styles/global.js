@@ -16,10 +16,6 @@ html, body, figure, img, div, section, article, input, button,span, textarea, p,
     text-decoration: none; 
   } 
 
-body{
-    font-family: 'Inter', sans-serif;
-}
-
 button{  
     cursor: pointer;        
     border: none;        
@@ -39,7 +35,7 @@ a{  color: unset;
     --color-secondary: #05162B;
     --color-purple: #3741F5;
     --color-grey-0: #000000;
-    --color-grey-05: #00000005;
+    --color-grey-05: #00000080;
     --color-white-1: #FFFFFF;
     --color-white-2: #F8F8F8;
 
