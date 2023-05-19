@@ -6,7 +6,7 @@ import { MenuContainer } from "../menuBox/menuContainer"
 
 export const Footer = () => {
   return (
-    <FooterStyle>
+    <FooterStyle >
       <div className="footerBox">
         <div>
           <h3>Email para contato</h3>
