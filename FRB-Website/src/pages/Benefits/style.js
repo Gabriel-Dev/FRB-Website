@@ -6,6 +6,7 @@ export const Main = styled.main`
   }
   .imgIntro {
     width: 100%;
+    
   }
   .textIntro {
     position: absolute;

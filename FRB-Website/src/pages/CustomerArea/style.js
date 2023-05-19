@@ -94,11 +94,12 @@ export const Main = styled.main`
     gap: 30px;
   }
   
-  @media(min-width:758px){
+  @media(min-width:768px){
+    height: 100vh;
+  
     .reverse{
     display: flex;
     flex-direction: row-reverse;
-    
     align-items: center;
     justify-content: center;
   }
