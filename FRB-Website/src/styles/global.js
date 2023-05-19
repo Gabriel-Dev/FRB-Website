@@ -49,7 +49,7 @@ a{  color: unset;
     --color-grey-0: #000000;
     --color-grey-05: #00000080;
     --color-white-1: #FFFFFF;
-    --color-white-2: #F8F8F8;
+    --color-white-2: #F1F1F1;
 
     --color-negative: #E60000;
     --color-warning:#FFCD07;

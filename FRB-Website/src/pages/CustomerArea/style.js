@@ -1,7 +1,9 @@
 import styled from "styled-components";
+
 export const Main = styled.main`
   background-color: var(--color-primary-1);
   width: 100%;
+  height: 100vh;
   min-width:404px;
   
   .positionIconBack {
@@ -93,8 +95,6 @@ export const Main = styled.main`
   }
   
   @media(min-width:758px){
-    height: 940px;
-  
     .reverse{
     display: flex;
     flex-direction: row-reverse;
@@ -102,33 +102,27 @@ export const Main = styled.main`
     align-items: center;
     justify-content: center;
   }
-.textFooter{
-  
-  width: 400px;
-  
-}
-.imglogo{
+    .textFooter{
+    width: 400px;
+  }
+  .imglogo{
   width: 128px;
   height: 45px;
-  
-}
-.positionElipse{
-width: 40%;
-}
-.elipse {
-    width: 500px;
-    height: 500px;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
+  }
+  .positionElipse{
+  width: 40%;
+  }
+  .elipse {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   }
   .elipse2 {
     width: 450px;
     height: 450px;
-    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,7 +131,6 @@ width: 40%;
   .elipse3 {
     width: 400px;
     height: 400px;
-   
   }
   .boxLogin {
     display: flex;
@@ -165,5 +158,5 @@ width: 40%;
   .textLogin{
     font-size:24px
   }
-  
+
 `;

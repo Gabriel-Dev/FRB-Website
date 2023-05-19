@@ -1,4 +1,4 @@
-import { FooterStyle } from "./styled/";
+import { FooterStyle } from "./styled";
 import logo from "../../assets/img/FRB.png"
 import { GrInstagram } from "react-icons/gr"
 import { GrLinkedinOption } from "react-icons/gr"

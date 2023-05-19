@@ -3,10 +3,13 @@ import FRB from "../../assets/img/FRB.png";
 import backLogin from "../../assets/img/IconBackPage.png";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/button";
+import { Modal } from "../../components/modals";
+
 export const CustomerArea = () => {
+  const open = false
   return (
+    <>
     <Main>
-        
       <div className="positionDesk">
         <div className="positionIconBack">
           <img className="imgIconBack" src={backLogin} alt="Icone para Voltar"
@@ -48,11 +51,18 @@ export const CustomerArea = () => {
         </div>
        
       <div className="positionDeskText">
-        <p className="textFooter">Monitore a performance dos seus contratos</p></div>
+        <p className="textFooter">
+          Monitore a performance dos seus contratos
+        </p>
         </div>
-        
       </div>
-      
+    </div>
+    {open ? 
+    <Modal size="test">
+      <h3>Tem certeza que deseja remover o  NOMEDOCLIENTE?</h3>
+      <Button type="button" name="Remover"/>
+    </Modal> : null}
     </Main>
+    </>
   );
 };

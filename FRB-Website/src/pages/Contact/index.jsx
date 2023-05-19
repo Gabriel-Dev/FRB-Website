@@ -1,9 +1,9 @@
 import { Main } from "./style";
-import { Header } from "../../components/header"
+import { Header } from "../../components/Header"
 import { Footer } from "../../components/Footer"
-import { Input } from "../../components/input"
-import { Button } from "../../components/button"
-import { Select } from "../../components/select"
+import { Input } from "../../components/Input"
+import { Button } from "../../components/Button"
+import { Select } from "../../components/Select"
 
 export const Contact = () => {
     return (
