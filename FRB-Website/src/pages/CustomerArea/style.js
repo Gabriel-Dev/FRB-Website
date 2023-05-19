@@ -93,12 +93,11 @@ export const Main = styled.main`
   }
   
   @media(min-width:758px){
-    height: 940px;
+    height: 100vh;
   
     .reverse{
     display: flex;
     flex-direction: row-reverse;
-    
     align-items: center;
     justify-content: center;
   }
