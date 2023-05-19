@@ -11,6 +11,7 @@ export const Main = styled.main`
   .iconBack {
     width: 39px;
     height: 36px;
+    cursor: pointer;
   }
   .iconLup {
     height: 15px;
