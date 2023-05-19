@@ -3,10 +3,12 @@ import logo from "../../assets/img/FRB.png"
 import { MenuBox } from "../menuBox"
 import { MenuContainer } from "../menuBox/menuContainer"
 import { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom";
 
-export const Header = () => {
+export const Header = ({className}) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [scroll, setScroll] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleResize = () => {
@@ -31,9 +33,13 @@ export const Header = () => {
   }, [])
 
   return (
-    <HeaderStyle className={scroll > 0 ? "backgroundWhite" : null}>
+    <HeaderStyle className={className ? className : scroll > 0 ? "backgroundWhite" : null}>
       <div className="container">
-        <img src={logo} alt="logo FRB" />
+        <img src={logo} alt="logo FRB" onClick={()=>{
+          window.scrollTo(0,0)
+          navigate("/")
+          }}/>
+          
         {windowWidth > 768 ? <MenuContainer/>: <MenuBox/>}
       </div>
     </HeaderStyle>

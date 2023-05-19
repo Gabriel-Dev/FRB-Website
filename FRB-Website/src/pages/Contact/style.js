@@ -5,8 +5,9 @@ display: flex;
 align-items: center;
 justify-content: center;
 width: 100%;
-height: max-content;
+height: 100vh;
 background-color: var(--color-primary-1);
+
 .container{
     display: flex;
     flex-direction: column;
