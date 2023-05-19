@@ -13,7 +13,6 @@ export const MainRoutes = ()=> {
             <Route path="NossoDiferencial" element={<OurDifferential />} />
             <Route path="Beneficios" element={<Benefits />} />
             <Route path="AreaDoCliente" element={<CustomerArea />} />
-            
             <Route path="Contato" element={<Contact />} />
             <Route path="*" element={<NotFound/>} />
         </Routes>

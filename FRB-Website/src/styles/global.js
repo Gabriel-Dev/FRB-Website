@@ -33,6 +33,13 @@ a{  color: unset;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.static{
+    position: relative;
+    z-index: 0;
+    background-color: var(--color-white-1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 :root {
     --color-primary-1: #134777;
     --color-primary-2: #0070BA;
@@ -43,7 +50,6 @@ a{  color: unset;
     --color-grey-05: #00000080;
     --color-white-1: #FFFFFF;
     --color-white-2: #F8F8F8;
-
 
     --color-negative: #E60000;
     --color-warning:#FFCD07;

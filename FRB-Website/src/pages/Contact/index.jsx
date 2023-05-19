@@ -1,6 +1,6 @@
 import { Main } from "./style";
 import { Header } from "../../components/header"
-import { Footer } from "../../components/footer"
+import { Footer } from "../../components/Footer"
 import { Input } from "../../components/input"
 import { Button } from "../../components/button"
 import { Select } from "../../components/select"
@@ -8,7 +8,7 @@ import { Select } from "../../components/select"
 export const Contact = () => {
     return (
         <>
-            <Header />
+            <Header className="static"/>
             <Main>
                 <div className="container">
                     <div className="text">
