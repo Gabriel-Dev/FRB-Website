@@ -12,13 +12,12 @@ export const OurDifferential = ()=> {
         <>
          <Header/>
         <Main>
-          
            <img className="imgIntro" src={tech} alt="Imagem de introdução" />
            <div className="positionCard">
            <div className="positionText">
            <p className="purple">Agilidade</p>
            <p className="article">Nós entendemos que burocracia e papelada excessiva podem ser fontes de frustração. É por isso que desenvolvemos processos simplificados que garantem a agilidade na contratação do seguro de vida dos seus associados.</p></div>
-           <img className="imgCard"  src={agility} alt="Imagem sobre agilidade" /></div>
+           <img className="imgCard "  src={agility} alt="Imagem sobre agilidade" /></div>
            <div className="positionCard invert"><div className="positionText">
            <p className="purple">Flexibilidade</p>
            <p className="article">Entendemos que cada indivíduo e empresa possuem necessidades específicas, por isso oferecemos cobertura abrangente e flexíves. Você pode personalizar seu plano para se adequar aos seus objetivos financeiros e garantir uma proteção adequada.</p></div>
@@ -34,7 +33,7 @@ export const OurDifferential = ()=> {
             <div className="positionCard">
             <div className="positionText"><p className="purple">Zelo</p><p className="article"> Proteger  seus colaboradores e seus respectivos  familiares  é um investimento valioso . Com a FRB você está fazendo mais do que apenas escolher uma consutoria, está escolhendo tranquilidade, segurança e um parceiro confiável para enfrentar os desafios e buscar o melhor custo benefico para a sua empresa.</p></div><img className="imgCard imgzeal" src={zeal} alt="Imagem sobre agilidade" /></div>
         </Main>
-        <Footer/>
+        <Footer className="footerBox"/>
         </>
     )
 }

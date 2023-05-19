@@ -2,7 +2,8 @@ import styled from "styled-components";
 export const Main = styled.main`
 height: 100%;
 .imgIntro{
-    width:100%;   
+    width:100%;  
+    
 }
 img{
     width: 100%;
@@ -30,19 +31,19 @@ font-weight: 300;
 
     .imgIntro{
         height: 600px;
-        
+        margin-bottom:-4px
     }
 
 
 .positionCard{
     display: flex;   
     width: 100%;
+    position:relative;
     
 }
 .imgCard{
     position: relative;
     bottom: 2%;
-    
     height: 400px;
     width: 50%;
 }
@@ -73,13 +74,11 @@ p{
  padding :20px ;
 }
 
-.imgIntro{
-    position: relative;
-    top: 4px;
-}
+
 .imgzeal{
     position: relative;
-    top: 0px;
+    
 }
+
 }
 `

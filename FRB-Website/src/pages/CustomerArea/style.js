@@ -98,22 +98,22 @@ export const Main = styled.main`
     .reverse{
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
+    
     align-items: center;
+    justify-content: center;
   }
 .textFooter{
-  position: relative;
-  left: 10%;
+  
   width: 400px;
-  text-align:center;
+  
 }
 .imglogo{
   width: 128px;
   height: 45px;
   
 }
-.positionElipse{width:50%
-
+.positionElipse{
+width: 40%;
 }
 .elipse {
     width: 500px;
