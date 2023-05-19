@@ -12,6 +12,10 @@ top: 0;
 left: 0;
 z-index: 2;
 
+img{
+    cursor: pointer;
+}
+
 .container{
     width: 1440px;
     height: 100%;
