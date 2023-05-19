@@ -9,6 +9,7 @@ export const MenuContainer = () => {
           <Link onClick={()=>{window.scrollTo(0,0)}} to ={"/Beneficios"}>Benefícios</Link>
           <Link onClick={()=>{window.scrollTo(0,0)}} to ={"/Contato"}>Contato</Link>
           <Link onClick={()=>{window.scrollTo(0,0)}} to ={"/AreaDoCliente"}>Área do cliente</Link>
+
         </MenuStyle>
   );
 };
