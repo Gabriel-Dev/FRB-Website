@@ -6,6 +6,7 @@ import { Contact } from "../pages/Contact";
 import { NotFound } from "../pages/NotFound";
 import { CustomerArea } from "../pages/CustomerArea";
 import { Admin } from "../pages/Admin";
+
 export const MainRoutes = () => {
   return (
     <Routes>
@@ -19,18 +20,3 @@ export const MainRoutes = () => {
     </Routes>
   );
 };
-import { ModalsPage } from "../pages";
-
-export const MainRoutes = ()=> {
-    return (
-        <Routes>
-            <Route path="/" element={<WhoWeAre />} />
-            <Route path="NossoDiferencial" element={<OurDifferential />} />
-            <Route path="Beneficios" element={<Benefits />} />
-            <Route path="AreaDoCliente" element={<CustomerArea />} />
-            <Route path="Contato" element={<Contact />} />
-            <Route path="Modals" element={<ModalsPage />} />
-            <Route path="*" element={<NotFound/>} />
-        </Routes>
-    )
-}

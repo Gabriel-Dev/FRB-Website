@@ -2,8 +2,8 @@ import { Main } from "./style";
 import FRB from "../../assets/img/FRB.png";
 import backLogin from "../../assets/img/IconBackPage.png";
 import { Input } from "../../components/Input";
-import { Button } from "../../components/button";
-import { Modal } from "../../components/modals";
+import { Button } from "../../components/Button";
+
 
 export const CustomerArea = () => {
   const open = false
@@ -57,11 +57,7 @@ export const CustomerArea = () => {
         </div>
       </div>
     </div>
-    {open ? 
-    <Modal size="test">
-      <h3>Tem certeza que deseja remover o  NOMEDOCLIENTE?</h3>
-      <Button type="button" name="Remover"/>
-    </Modal> : null}
+
     </Main>
     </>
   );

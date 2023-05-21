@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ModalBackground = styled.div`
+export const ModalBackgroundStyle = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
