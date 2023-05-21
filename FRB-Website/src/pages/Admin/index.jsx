@@ -15,7 +15,7 @@ export const Admin = () => {
         <div className="positionHeader">
           <img
             className="iconBack"
-            src={backLogin}
+            src={backLogin} onClick={()=>{window.history.back()}}
             alt="Menu para voltar a página"
           />
           <img src={FRB} alt="Logo da empresa" />
