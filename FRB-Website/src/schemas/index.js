@@ -7,7 +7,7 @@ export const formSchemaLogin = yup.object().shape({
     .string()
     .matches(passwordType, {
       message:
-        "Deve conter minimo de 8 caractéres, ter letra, número e ao menos um símbolo",
+        "Deve conter no minimo 6 caractéres ter letra e número",
     })
     .required("Senha Obrigatória"),
 
