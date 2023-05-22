@@ -5,10 +5,11 @@ import { AiOutlineSearch } from "react-icons/ai";
 import buttonPlus from "../../assets/img/Button Plus.png";
 import iconEdit from "../../assets/img/Icon Edit.png";
 import iconTrash from "../../assets/img/Icon Trash.png";
+
 import { EditModal } from "../../components/Modals/Edit.jsx"
 
 export const Admin = () => {
-  const open = "edit"
+  // const open = "edit"
   return (
     <Main>
       <div className="borderBotton">

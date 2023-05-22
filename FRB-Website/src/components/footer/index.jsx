@@ -5,12 +5,15 @@ import { GrLinkedinOption } from "react-icons/gr"
 import { MenuContainer } from "../menuBox/menuContainer"
 
 export const Footer = () => {
+  const redirectToInstagram = () => {
+    window.location.href = 'https://www.instagram.com/frbconsultoria_/';
+  };
   return (
     <FooterStyle >
       <div className="footerBox">
         <div>
           <h3>Email para contato</h3>
-          <p>email@email.com</p>
+          <p>contato@frbconsultoria.com.br</p>
 
           <h3>Telefone para contato</h3>
           <p>(xx)xxxxx-xxxx</p>
@@ -22,7 +25,7 @@ export const Footer = () => {
         <div>
           <h3>Siga-nos</h3>
           <div className="icons">
-            <GrInstagram />
+            <GrInstagram onClick={redirectToInstagram} />
             <GrLinkedinOption />
           </div>
         </div>

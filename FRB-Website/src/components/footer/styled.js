@@ -6,7 +6,9 @@ height: max-content;
 background-color: var(--color-secondary);
 color: var(--color-white-1);
 position: relative;
-
+svg{
+    cursor: pointer;
+}
 .footerBox{
     width: 100%;
     display: flex;
