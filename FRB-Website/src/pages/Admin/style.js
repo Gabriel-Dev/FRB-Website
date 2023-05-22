@@ -110,6 +110,7 @@ export const Main = styled.main`
     width: 100%;
   }
   @media (min-width: 768px) {
+   
     .positionBussines {
       display: flex;
       width: 100%;

@@ -34,7 +34,7 @@ export const ModalBenefits = () => {
     <Modal>
       <Link
         onClick={() => {
-          scrollToSmoothly(700, 4000);
+          scrollToSmoothly(700, 3000);
         }}
         to={"/beneficios"}
         className="displayBox"
@@ -43,14 +43,14 @@ export const ModalBenefits = () => {
         <img src={logoLife} alt="Icone de Saúde" />
       </Link>
       <Link onClick={() => {
-          scrollToSmoothly(1100, 4000);
+          scrollToSmoothly(1100, 3000);
         }}
         to={"/beneficios"} className="displayBox">
        <p>Vida</p>
         <img src={IconTooth} alt="Icone Vida" />
       </Link>{" "}
       <Link onClick={() => {
-          scrollToSmoothly(1500, 4000);
+          scrollToSmoothly(1500, 3000);
         }}
         to={"/beneficios"} className="displayBox">
         
