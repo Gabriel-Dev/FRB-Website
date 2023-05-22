@@ -15,6 +15,10 @@ export const Main = styled.main`
     gap: 20px;
     padding: 20px;
   }
+  .imgCard{
+    position: relative;
+    top: 5px;
+  }
   .purple {
     color: var(--color-purple);
     font-size: 17;
@@ -37,7 +41,8 @@ export const Main = styled.main`
       position: relative;
       bottom: 2%;
       height: 400px;
-      width: 50%;
+      width: 50%; 
+    top: 0px;
     }
     .positionImg {
       width: 100%;
@@ -64,8 +69,6 @@ export const Main = styled.main`
       padding: 20px;
     }
 
-    .imgzeal {
-      
-    }
+   
   }
 `;
