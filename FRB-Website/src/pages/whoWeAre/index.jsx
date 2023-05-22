@@ -29,7 +29,7 @@ export const WhoWeAre = () => {
                             Ao longo dos anos, estabelecemos um nome de confiança como provedores de serviços de proteção financeira.
                         </p>
                         <p>
-                            Quando você escolhe nossa empresa, você escolhe a tranquilidade de saber que sua família estará protegida por uma equipe experiente e dedicada.
+                            Quando você escolhe nossa empresa, você escolhe a tranquilidade de saber que seus beneficiários estaram protegidos por uma equipe experiente e dedicada.
                         </p>
                     </div>
                 </div>
