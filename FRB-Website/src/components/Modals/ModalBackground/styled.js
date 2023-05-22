@@ -33,6 +33,7 @@ background-color: var(--color-grey-05);
         position: absolute;
         top: 8px;
         right: 24px;
+        cursor: pointer;
     }
 }
 `

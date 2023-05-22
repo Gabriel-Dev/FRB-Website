@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { RiErrorWarningFill } from "react-icons/ri"
 
-export const Main = styled.main`
-.remove{
+export const RemoveClientStyle = styled.div`
+.removeClient{
   width: 90%;
+  max-width: 400px;
   height: max-content;
   gap: 16px;
 
@@ -36,6 +37,12 @@ export const Main = styled.main`
       color: var(--color-white-1);
     }
   }
+}
+
+@media (min-width: 768px) {
+.remove{
+  max-width: 400px;
+}
 }
 `;
 
