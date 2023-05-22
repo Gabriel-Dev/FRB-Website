@@ -13,6 +13,6 @@ border-radius: var(--radius-1);
 padding: 0 16px;
 
 :hover{
-    background-color: var(--color-primary-2);
+    filter: contrast(130%);
 }
 `

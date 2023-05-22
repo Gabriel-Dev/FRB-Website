@@ -51,7 +51,7 @@ a{  color: unset;
     --color-white-1: #FFFFFF;
     --color-white-2: #F1F1F1;
 
-    --color-negative: #E60000;
+    --color-negative: #8B1E1E;
     --color-warning:#FFCD07;
     --color-sucess:#319A20;
     --color-sucess:#155BCB;
