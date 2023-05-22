@@ -1,10 +1,68 @@
-import { createContext } from "react";
-export const userContext = createContext({})
-
+import { createContext,useState,useEffect } from "react";
+export const UserContext = createContext({})
+import { useNavigate } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
+import { api } from "../../services/api";
+import {
+    notifyErrorLogin,
+    notifySucessLogin,
+  } from "../../Toastfy";
+// eslint-disable-next-line react/prop-types
 export const UserProvider = ({ children })=> {
+    const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
+    const handleForm = async (body) => {
+        try {
+          const response = await api.post("COLOCAR O CAMINHO CERTO", body);
+    
+          window.localStorage.clear();
+          window.localStorage.setItem(
+            "@token",
+            JSON.stringify(response.data.accessToken)
+          );
+          notifySucessLogin();
+          setLoading(true);
+          navigate("COLOCAR O CAMINHO CERTO");
+        } catch (err) {
+          console.log(err);
+          notifyErrorLogin();
+          
+        }
+      };
+      useEffect(() => {
+        async function loadUser() {
+          const token = JSON.parse(localStorage.getItem("@token"));
+    
+          if (!token) {
+            setLoading(false);
+            return;
+          }
+    
+          try {
+            const { data } = await api.get("COLOCAR O CAMINHO CERTO", {
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
+            });
+            setUser(data);
+          } catch (err) {
+            console.log(err);
+          } finally {
+            setLoading(false);
+          }
+        }
+        loadUser();
+      }, [navigate]);
     return (
-        <userContext.Provider value={{}}>
+        <UserContext.Provider value={{
+            handleForm,
+            loading,
+            setLoading,
+            user, 
+            setUser
+        }}>
             {children}
-        </userContext.Provider>)
+        </UserContext.Provider>)
 }
 

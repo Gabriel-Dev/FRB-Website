@@ -2,11 +2,13 @@ import { Main } from "./style";
 import FRB from "../../assets/img/FRB.png";
 import backLogin from "../../assets/img/IconBackPage.png";
 import { Input } from "../../components/Input";
-import { Button } from "../../components/Button";
-
-
+import { Button } from "../../components/button";
+import { useContext } from "react";
+import { UserContext } from "../../contexts/userContext/userContext";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { formSchemaLogin } from "../../schemas";
 export const CustomerArea = () => {
-  const open = false
   return (
     <>
     <Main>
@@ -25,7 +27,7 @@ export const CustomerArea = () => {
             <div className="elipse">
               <div className="elipse2">
                 <div className="elipse3">
-                  <div className="boxLogin">
+                  <form onSubmit={handleSubmit(handleForm)} className="boxLogin">
                     <p className="textLogin">Login</p>
                     <div className="inputPosition">
                     <Input
@@ -33,6 +35,9 @@ export const CustomerArea = () => {
                       type="text"
                       label="E-mail"
                       placeholder="Digite seu email"
+                      error={errors.email?.message}
+                      register={register("email")}
+                      
                     ></Input>
 
                     <Input
@@ -40,10 +45,12 @@ export const CustomerArea = () => {
                       type="password"
                       label="Senha"
                       placeholder="Digite sua senha"
+                      error={errors.password?.message}
+                      register={register("password")}
                     ></Input></div>
                     <p>Esqueceu sua senha?</p>
                     <Button type="submit" name="Entrar"></Button>
-                  </div>
+                  </form>
                 </div>
               </div>
             </div>
