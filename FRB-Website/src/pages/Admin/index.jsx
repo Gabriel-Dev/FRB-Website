@@ -5,7 +5,10 @@ import { AiOutlineSearch } from "react-icons/ai";
 import buttonPlus from "../../assets/img/Button Plus.png";
 import iconEdit from "../../assets/img/Icon Edit.png";
 import iconTrash from "../../assets/img/Icon Trash.png";
+import { EditModal } from "../../components/Modals/Edit.jsx"
+
 export const Admin = () => {
+  const open = "edit"
   return (
     <Main>
       <div className="borderBotton">
@@ -41,7 +44,10 @@ export const Admin = () => {
       <section>
         <div className="positionOption">
           <div className="positionBussines">
-            <p>Empresa</p> <p>Usuários</p> <p>CNPJ</p> <p>Telefone</p>
+            <p>Empresa</p> 
+            <p>Usuários</p> 
+            <p>CNPJ</p> 
+            <p>Telefone</p>
             <p>Email</p>
             <p>Editar</p>
             <p>Remover</p>
@@ -56,32 +62,16 @@ export const Admin = () => {
               <p>xxxxxxxxxx</p>
               <p>xxxxxxxxxx</p>
             <span>
-            <img src={iconEdit} alt="Icone Editar" />{" "}</span>
+            <img src={iconEdit} alt="Icone Editar" />
+            </span>
             <span>
-            <img src={iconTrash} alt="Icone Remover" /></span>
-          </li> <li className="positionBussines">
-              <p>Cliente1</p>
-              <p>2</p>
-              <p>xxxxxxxx</p>
-              <p>xxxxxxxxxx</p>
-              <p>xxxxxxxxxx</p>
-            <span>
-            <img src={iconEdit} alt="Icone Editar" />{" "}</span>
-            <span>
-            <img src={iconTrash} alt="Icone Remover" /></span>
-          </li> <li className="positionBussines">
-              <p>Cliente1</p>
-              <p>2</p>
-              <p>xxxxxxxx</p>
-              <p>xxxxxxxxxx</p>
-              <p>xxxxxxxxxx</p>
-            <span>
-            <img src={iconEdit} alt="Icone Editar" />{" "}</span>
-            <span>
-            <img src={iconTrash} alt="Icone Remover" /></span>
+            <img src={iconTrash} alt="Icone Remover" />
+            </span>
           </li>
         </ul>
       </section>
+      {open == "edit" ? <EditModal/> : null}
+     
     </Main>
   );
 };

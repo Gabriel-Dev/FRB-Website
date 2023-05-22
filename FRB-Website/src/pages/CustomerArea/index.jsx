@@ -9,17 +9,9 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { formSchemaLogin } from "../../schemas";
 export const CustomerArea = () => {
-  const { handleForm } = useContext(UserContext);
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    resolver: yupResolver(formSchemaLogin),
-  });
   return (
+    <>
     <Main>
-        
       <div className="positionDesk">
         <div className="positionIconBack">
           <img className="imgIconBack" src={backLogin} alt="Icone para Voltar"
@@ -66,11 +58,14 @@ export const CustomerArea = () => {
         </div>
        
       <div className="positionDeskText">
-        <p className="textFooter">Monitore a performance dos seus contratos</p></div>
+        <p className="textFooter">
+          Monitore a performance dos seus contratos
+        </p>
         </div>
-        
       </div>
-      
+    </div>
+
     </Main>
+    </>
   );
 };
