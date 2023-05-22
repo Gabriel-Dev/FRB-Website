@@ -1,5 +1,8 @@
 import styled from "styled-components";
 export const Main = styled.main`
+  background-image: url("src/assets/img/BackgroundDashboard.png");
+  background-size: cover;
+  background-position:center;
   background-color: var(--color-primary-1);
   height: 100vh;
   .positionHeader {
