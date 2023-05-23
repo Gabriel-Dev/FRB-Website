@@ -30,6 +30,7 @@ background-color: var(--color-grey-05);
     padding: 16px;
 
     text-align: center;
+   
 
     .close{
         font-size: 24px;
