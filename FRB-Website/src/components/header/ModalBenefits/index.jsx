@@ -6,14 +6,10 @@ import { Link } from "react-router-dom";
 export const ModalBenefits = () => {
   function scrollToSmoothly(pos, time) {
     const currentPos = window.pageYOffset || document.documentElement.scrollTop;
-
     const distance = pos - currentPos;
-
     const framesPerSecond = 60;
-
     const totalTime =
       Math.max(0.1, Math.min(Math.abs(distance) / 1000, 0.8)) * time;
-
     const increment = distance / (totalTime / (1000 / framesPerSecond));
 
     let currentPosition = currentPos;

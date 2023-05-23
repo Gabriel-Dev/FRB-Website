@@ -22,7 +22,6 @@ export const CustomerArea = () => {
   return (
     <>
       <Main>
-        <div className="positionDesk">
           <div className="positionIconBack">
             <img
               className="imgIconBack"
@@ -81,7 +80,7 @@ export const CustomerArea = () => {
               </p>
             </div>
           </div>
-        </div>
+        
       </Main>
     </>
   );

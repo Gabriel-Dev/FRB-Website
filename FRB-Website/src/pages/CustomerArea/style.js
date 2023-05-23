@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Main = styled.main`
   background-color: var(--color-primary-1);
   width: 100%;
-  height: 100vh;
+  height: max-content;
   min-width:404px;
   
   .positionIconBack {
@@ -80,6 +80,7 @@ export const Main = styled.main`
   input{
     margin-top:0
   }
+ 
   .textFooter{
     font-family: 'Nunito', sans-serif;
     font-size:36px;
@@ -95,8 +96,7 @@ export const Main = styled.main`
   }
   
   @media(min-width:768px){
-    height: 100vh;
-  
+    min-height: 100vh;
     .reverse{
     display: flex;
     flex-direction: row-reverse;
