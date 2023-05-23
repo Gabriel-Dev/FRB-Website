@@ -5,7 +5,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 width: 100%;
-height: 100vh;
+height: max-content;
 background-color: var(--color-primary-1);
 
 .container{
@@ -54,7 +54,7 @@ background-color: var(--color-primary-1);
 }
 
 @media (min-width: 768px) {
-    height: 90vh;
+    min-height: 70vh;
         .container{
             flex-direction: row;
             margin-top: 0;
