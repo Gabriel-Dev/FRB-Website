@@ -15,7 +15,10 @@ z-index: 3;
 background-color: var(--color-grey-05);
 
 .modal{
-    background-color: var(--color-white-1);
+    background-image: url("src/assets/img/backgroundModal.png");
+    background-size:contain;
+    
+    background-position:center;
     position: relative;
 
     display: flex;
