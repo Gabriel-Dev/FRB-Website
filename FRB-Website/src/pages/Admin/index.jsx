@@ -1,4 +1,4 @@
-import FRB from "../../assets/img/FRB.png";
+import FRB from "../../assets/img/logoBranca.png";
 import { Main } from "./style";
 import { AiOutlineSearch } from "react-icons/ai";
 import { CreateCompanyModal } from "../../components/Modals/createCompany";
@@ -26,7 +26,7 @@ export const Admin = () => {
             }}
             alt="Menu para voltar a página"
           />
-          <img src={FRB} alt="Logo da empresa" />
+          <img className="imgLogo" src={FRB} alt="Logo da empresa" />
         </div>
       </div>
       <div className="positionNameClient">
@@ -34,16 +34,16 @@ export const Admin = () => {
       </div>
       <div className="positionIntro">
         <div className="positionLayout">
-          <p>Empresa</p>
+          <p>Clientes</p>
           <div>
             <div className="iconPositionAdd">
-              <p>Criar Empresa</p>
+              <p>Criar Cliente</p>
               <img src={buttonPlus} alt="Botão de Adicionar Empresa" onClick={()=>{setCompanyModal(<CreateCompanyModal/>)}}/>
             </div>
           </div>
         </div>
         <form className="positionInput">
-          <input type="text" placeholder="Digite o nome da empresa" />
+          <input type="text" placeholder="Digite o nome do cliente" />
           <button className="iconLup">
             <AiOutlineSearch />
           </button>
@@ -52,7 +52,7 @@ export const Admin = () => {
       <section>
         <div className="positionOption">
           <div className="positionBussines">
-            <p>Empresa</p>
+            <p>Clientes</p>
             <p>Usuários</p>
             <p>CNPJ</p>
             <p>Telefone</p>

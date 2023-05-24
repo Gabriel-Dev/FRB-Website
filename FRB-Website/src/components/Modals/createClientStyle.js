@@ -7,6 +7,7 @@ export const CreateClient = styled.div`
     height: 60%;
     overflow: auto;
     padding: 64px 16px;
+    height: max-content;
     div {
       width: 100%;
       height: 100%;
@@ -35,12 +36,12 @@ export const CreateClient = styled.div`
           border: 1px solid var(--color-grey-0);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           border-radius: 4px;
-          padding: 16px;
+          padding: 0px 0px 0px 16px;
         }
 
         textarea {
           width: 100%;
-          height: 150px;
+          height: 90px;
           resize: none;
           padding: 16px;
           border: 1px solid var(--color-grey-0);

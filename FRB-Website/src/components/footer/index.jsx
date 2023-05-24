@@ -30,7 +30,7 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <img src={logo} alt="logo FRB" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }) }} />
+      <img src={logo} alt="logo FRB" className="imgLogo" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }) }} />
     </FooterStyle>
   );
 };

@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 export const FooterStyle = styled.footer`
+.imgLogo{
+    width: 160px;
+        height: 90;
+}
 width: 100%;
 height: max-content;
 background-color: var(--color-secondary);

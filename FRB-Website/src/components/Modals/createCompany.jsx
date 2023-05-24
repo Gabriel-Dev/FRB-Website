@@ -8,37 +8,57 @@ export const CreateCompanyModal = () => {
     <CreateCompany>
       <ModalBackground size="createCompany">
         <div>
+          <p className="textHeader">Criar cliente</p>
           <form>
             <Input
-              name="Nome da empresa"
+              name="Nome do cliente"
               type="text"
-              placeholder="Digite o nome da empresa"
-              label="Nome da empresa"
+              placeholder="Digite o nome do cliente"
+              label="Nome do cliente*"
             />
             <Input
               name="CNPJ"
               type="text"
-              placeholder="Digite o cnpj da empresa"
-              label="CNPJ"
+              placeholder="Digite o cnpj do cliente"
+              label="CNPJ*"
             />
             <Input
-              name="Nova Senha"
-              type="password"
-              placeholder="Digite uma nova senha"
-              label="Nova Senha"
+              name="Razão social"
+              type="text"
+              placeholder="Digite a razão social"
+              label="Razão social*"
             />
             <Input
               name="Telefone"
               type="tel"
-              placeholder="Digite o telefone da empresa"
+              placeholder="Digite o telefone do cliente"
               label="Telefone"
             />
             <Input
               name="E-mail"
               type="email"
-              placeholder="Digite o e-mail da empresa"
-              label="E-mail*"
+              placeholder="Digite o e-mail do cliente"
+              label="E-mail"
             />
+            <div className="positionContract">
+            <Input className="contractNumber"
+              name="Saúde"
+              type="number"
+              placeholder="Digite o contrato de Saúde"
+              label="Contrato de Saúde"
+            />
+            <Input className="contractNumber"
+              name="Vida"
+              type="number"
+              placeholder="Digite o contrato de Vida"
+              label="Contrato de Vida"
+            />
+            <Input className="contractNumber"
+              name="Dental"
+              type="number"
+              placeholder="Digite o contrato Dental"
+              label="Contrato Dental"
+            /></div>
             <Button type="submit" name="Criar"></Button>
           </form>
         </div>

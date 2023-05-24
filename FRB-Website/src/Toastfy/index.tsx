@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
 
 export const notifySucessLogin = () => {
-  toast.success("Usuário Logado com Sucesso!", {
+  toast.success("User", {
     position: "bottom-right",
     toastId: "YES",
     autoClose: 4000,
@@ -14,7 +14,7 @@ export const notifySucessLogin = () => {
   });
 };
 export const notifyErrorLogin = () => {
-  toast.error("Algo deu errado com seu Login :(", {
+  toast.error("User", {
     position: "bottom-right",
     toastId: "YES",
     autoClose: 4000,

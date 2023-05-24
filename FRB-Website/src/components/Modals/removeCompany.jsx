@@ -7,7 +7,7 @@ export const RemoveCompanyModal = ({name}) => {
       <RemoveCompanyStyle>
           <ModalBackground size="removeCompany">
             <Icon />
-            <h4>Tem certeza que deseja remover a empresa {name}?</h4>
+            <h4>Tem certeza que deseja remover o cliente {name}?</h4>
             <div>
               <span>
                 <Button type="button" name="cancelar" />

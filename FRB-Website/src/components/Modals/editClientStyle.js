@@ -1,12 +1,18 @@
 import styled from "styled-components";
 
 export const EditClient = styled.div`
+.inputCpf{
+  ::-webkit-inner-spin-button,::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0 auto;
+  }
+}
   .editClient {
     width: 80%;
     max-width: 740px;
-    height: 62%;
+    height: max-content;
     overflow: auto;
-    padding: 64px 16px;
+    padding: 32px 16px;
     div {
       width: 100%;
       height: 100%;
@@ -35,7 +41,7 @@ export const EditClient = styled.div`
           border: 1px solid var(--color-grey-0);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           border-radius: 4px;
-          padding: 16px;
+          padding: 0px 0px 0px 16px;
         }
 
         textarea {
@@ -69,7 +75,7 @@ export const EditClient = styled.div`
           justify-content: space-between;
           align-items: flex-start;
           flex-wrap: wrap;
-          gap: 32px;
+          gap: 16px;
           label {
             min-width: 45%;
             width: 45%;

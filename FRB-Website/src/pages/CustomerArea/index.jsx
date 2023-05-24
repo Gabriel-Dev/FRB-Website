@@ -1,5 +1,5 @@
 import { Main } from "./style";
-import FRB from "../../assets/img/FRB.png";
+import FRB from "../../assets/img/logoBranca.png";
 import backLogin from "../../assets/img/IconBackPage.png";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
@@ -67,7 +67,7 @@ export const CustomerArea = () => {
                             register={register("password")}
                           ></Input>
                         </div>
-                        <p>Esqueceu sua senha?</p>
+                        
                         <Button type="submit" name="Entrar"></Button>
                       </form>
                     </div>
