@@ -8,7 +8,7 @@ export const RemoveClientModal = ({name}) => {
       <RemoveClientStyle>
           <ModalBackground size="removeClient">
             <Icon />
-            <h4>Tem certeza que deseja remover o cliente {name}?</h4>
+            <h4>Tem certeza que deseja remover o usuário {name}?</h4>
             <div>
               <span>
                 <Button type="button" name="cancelar" />

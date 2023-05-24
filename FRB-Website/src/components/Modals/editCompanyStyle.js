@@ -6,7 +6,17 @@ export const EditCompany = styled.div`
     max-width: 940px;
     height: 70%;
     overflow: auto;
-    padding: 64px 16px;
+    padding: 32px 16px;
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--color-primary-1);
+      border-radius: 5px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
     div {
       width: 100%;
       height: 100%;
@@ -41,7 +51,7 @@ export const EditCompany = styled.div`
       }
       ul {
         width: 100%;
-        min-height: 270px;
+        min-height: 243px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -49,25 +59,31 @@ export const EditCompany = styled.div`
         border-radius: var(--radius-1);
         padding: 16px;
         gap: 16px;
-        background-color: var(--color-white-2);
+        background-color: var(--color-white-1);
+        box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.5);
+        
         li {
           min-width: 90%;
           height: max-content;
           padding: 16px;
           position: relative;
           background-color: var(--color-white-1);
+          /* border: 1px solid var(--color-grey-0); */
           display: flex;
           flex-direction: column;
           gap: 32px;
           border-radius: var(--radius-1);
           text-align: left;
+          border-bottom: 4px solid var(--color-primary-1);
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
           div {
             display: flex;
             flex-direction: column;
             align-items: center;
             button {
               background-color: var(--color-primary-1);
-              width: 100%;
+              width:65%;
+              border-radius:4px
             }
             button + button {
               background-color: var(--color-negative);

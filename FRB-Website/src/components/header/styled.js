@@ -26,7 +26,10 @@ img{
     align-items: center;
 
     padding: 32px;
-    
+    .imgLogo{
+        width: 160px;
+        height: 90;
+    }
     svg{
         width: 30px;
         height: 30px;

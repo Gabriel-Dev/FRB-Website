@@ -17,47 +17,71 @@ export const EditCompanyModal = () => {
         <div>
           <form>
             <Input
-              name="Nome da empresa"
+              name="Nome do Cliente"
               type="text"
-              placeholder="Digite o nome da empresa"
-              label="Nome da empresa"
+              placeholder="Atualize o nome do cliente"
+              label="Nome do Cliente"
             />
             <Input
               name="CNPJ"
               type="text"
-              placeholder="Digite o cnpj da empresa"
+              placeholder="Atualize o cnpj do cliente"
               label="CNPJ"
             />
             <Input
               name="Nova Senha"
               type="password"
-              placeholder="Digite uma nova senha"
+              placeholder="Crie uma nova senha"
               label="Nova Senha"
             />
             <Input
               name="Telefone"
               type="tel"
-              placeholder="Digite o telefone da empresa"
+              placeholder="Atualize o telefone do cliente"
               label="Telefone"
             />
             <Input
               name="E-mail"
               type="email"
-              placeholder="Digite o e-mail da empresa"
+              placeholder="Atualize o e-mail do cliente"
               label="E-mail*"
             />
+            <Input
+              name="Razão Social"
+              type="text"
+              placeholder="Atualize razão social do cliente"
+              label="Razão Social"
+            />
+            <Input
+              name="Contrato de Saúde"
+              type="text"
+              placeholder="Atualize o contato de saúde"
+              label="Contrato de Saúde"
+            />
+            <Input
+              name="Contrato de Vida"
+              type="text"
+              placeholder="Atualize o contato de Vida"
+              label="Contato de Vida"
+            />
+            <Input
+              name="Contrato Dental"
+              type="text"
+              placeholder="Atualize o contrato Dental"
+              label="Contrato Dental"
+            />
             <Button type="submit" name="Atualizar">
-              {" "}
+              
             </Button>
           </form>
           <div className="positionClient">
-            <h3>Cliente</h3>
-            <Button type="submit" name="Criar cliente" onClick={()=>{setClientModal(<CreateClientModal/>)}}></Button>
+            <h3>Gerenciamento de Usuário</h3>
+            <Button type="submit" name="Criar usuário" onClick={()=>{setClientModal(<CreateClientModal/>)}}></Button>
           </div>
           <ul className="clientList">
             <li>
               <span className="close" onClick={()=>{setClientModal(<RemoveClientModal name={"name"}/>)}}> x </span>
-              <h4>tipo</h4>
+              <h4>Médico</h4>
               <div>
                 <Button type="button" name="Editar" onClick={()=>{setClientModal(<EditClientModal/>)}}></Button>
                 <Button type="button" name="Desativar"></Button>

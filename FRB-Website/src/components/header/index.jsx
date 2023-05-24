@@ -35,7 +35,7 @@ export const Header = ({className}) => {
   return (
     <HeaderStyle className={className ? className : scroll > 0 ? "backgroundWhite" : null}>
       <div className="container">
-        <img src={logo} alt="logo FRB" onClick={()=>{
+        <img className="imgLogo" src={logo} alt="logo FRB" onClick={()=>{
           window.scrollTo(0,0)
           navigate("/")
           }}/>

@@ -5,7 +5,11 @@ export const Main = styled.main`
   width: 100%;
   height: max-content;
   min-width:404px;
-  
+
+  .imglogo{
+    width: 190px;
+    height: 90px;
+  }
   .positionIconBack {
     display: flex;
     width: 100%;
@@ -106,10 +110,7 @@ export const Main = styled.main`
     .textFooter{
     width: 400px;
   }
-  .imglogo{
-  width: 128px;
-  height: 45px;
-  }
+  
   .positionElipse{
   width: 40%;
   }
