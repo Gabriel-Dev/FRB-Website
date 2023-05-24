@@ -8,18 +8,17 @@ import { UserContext } from "../../contexts/userContext/userContext";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { formSchemaLogin } from "../../schemas";
+
 import { AiFillEye } from "react-icons/ai";
 import { AiFillEyeInvisible } from "react-icons/ai";
 import { useState} from "react"
+
 export const CustomerArea = () => {
   const { handleForm } = useContext(UserContext);
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    resolver: yupResolver(formSchemaLogin),
+  const { register, handleSubmit, formState: { errors }} = useForm({
+    
   });
+
   const [eye, setEye] = useState(false);
   const [pass, setPass] = useState("password")
 const viewPass = () =>{
@@ -32,24 +31,26 @@ setEye(true)
     setEye(false)
   }
 }
+
   return (
     <>
       <Main>
-          <div className="positionIconBack">
-            <img
-              className="imgIconBack"
-              src={backLogin}
-              alt="Icone para Voltar"
-              onClick={() => {
-                window.history.back();
-              }}
-            />
-          </div>
+        <div className="positionIconBack">
+          <img
+            className="imgIconBack"
+            src={backLogin}
+            alt="Icone para Voltar"
+            onClick={() => {
+              window.history.back();
+            }}
+          />
+        </div>
 
-          <div className="positionLogo">
-            <img className="imglogo" src={FRB} alt="Logo Da FRB" />
-          </div>
-          <div className="reverse">
+        <div className="positionLogo">
+          <img className="imglogo" src={FRB} alt="Logo Da FRB" />
+        </div>
+        <div className="reverse">
+          <div className="positionElipse">
             <div className="positionElipse">
               <div className="positionElipse">
                 <div className="elipse">
@@ -79,7 +80,7 @@ setEye(true)
                             register={register("password")}
                           ></Input>{eye == false?<AiFillEye onClick={viewPass}/>:<AiFillEyeInvisible onClick={viewPass}/>}
                           
-                          
+          
                           </div>
                         </div>
                         
@@ -90,13 +91,13 @@ setEye(true)
                 </div>
               </div>
             </div>
-            <div className="positionDeskText">
-              <p className="textFooter">
-                Monitore a performance dos seus contratos
-              </p>
-            </div>
           </div>
-        
+          <div className="positionDeskText">
+            <p className="textFooter">
+              Monitore a performance dos seus contratos
+            </p>
+          </div>
+        </div>
       </Main>
     </>
   );
