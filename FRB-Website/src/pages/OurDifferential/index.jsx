@@ -1,6 +1,6 @@
 import { Main } from "./style";
 import { Header } from "../../components/header";
-import { Footer } from "../../components/footer";
+import { Footer } from "../../components/Footer";
 import tech from "../../assets/img/tech.png";
 import agility from "../../assets/img/agillity.png";
 import flexibility from "../../assets/img/flexibility.png";
