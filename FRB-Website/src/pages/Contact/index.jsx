@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 export const Contact = () => {
+
     const contactSubmit = (data) =>{
       console.log(data)
     }
@@ -38,6 +39,7 @@ export const Contact = () => {
                 label="Nome*"
                 register={register("name")}
               />
+
 
               <Input
                 name="email"

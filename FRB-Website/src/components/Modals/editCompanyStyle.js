@@ -55,13 +55,24 @@ export const EditCompany = styled.div`
         display: flex;
         flex-direction: row;
         align-items: center;
-        overflow-x: auto;
+        overflow-y: auto;
+        overflow-y:hidden;
         border-radius: var(--radius-1);
         padding: 16px;
         gap: 16px;
         background-color: var(--color-white-1);
         box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.5);
-        
+        &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--color-primary-1);
+      border-radius: 5px;
+      
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
         li {
           min-width: 90%;
           height: max-content;
