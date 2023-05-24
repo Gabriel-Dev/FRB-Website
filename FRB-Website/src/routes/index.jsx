@@ -6,6 +6,7 @@ import { Contact } from "../pages/Contact";
 import { NotFound } from "../pages/NotFound";
 import { CustomerArea } from "../pages/CustomerArea";
 import { Admin } from "../pages/Admin";
+import { User } from "../pages/Users";
 
 export const MainRoutes = () => {
   return (
@@ -15,6 +16,7 @@ export const MainRoutes = () => {
       <Route path="beneficios" element={<Benefits />} />
       <Route path="contato" element={<Contact />} />
       <Route path="areadocliente" element={<CustomerArea />} />
+      <Route path="user" element={<User />} />
       <Route path="admin" element={<Admin />} />
       <Route path="*" element={<NotFound />} />
     </Routes>

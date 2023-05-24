@@ -10,10 +10,10 @@ export const CreateClientModal = () => {
         <div>
           <form>
             <Input
-              name="Nome do cliente"
+              name="Nome do usuário"
               type="text"
-              placeholder="Digite o nome do cliente"
-              label="Nome do cliente"
+              placeholder="Digite o nome do usuário"
+              label="Nome do usuário"
             />
             <Input
               name="Link Power Bi"
@@ -21,15 +21,21 @@ export const CreateClientModal = () => {
               placeholder="Digite o link power Bi"
               label="Link Power Bi"
             />
-            <label> Nivel do cliente
+            <Input
+              name="E-mail"
+              type="email"
+              placeholder="Atualize o email do usuário"
+              label="E-mail"
+            />
+            <label> Nivel do usuário
               <select>
                 <option value="">--</option>
-                <option value="Admin">Admin</option>
-                <option value="Commun">Usuário comum</option>
+                <option value="medic">Médico</option>
+                <option value="rh">RH</option>
               </select>
             </label>
-            <label> Descrição do cliente
-              <textarea name="description" placeholder="Digite a descrição do cliente"></textarea>
+            <label> Descrição do usuário
+              <textarea name="description" placeholder="Digite a descrição do usuário"></textarea>
             </label>
             <div>
               <Button type="submit" name="Criar"></Button>

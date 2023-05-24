@@ -5,6 +5,11 @@ export const Main = styled.main`
   background-position:center;
   background-color: var(--color-primary-1);
   height: 100vh;
+  
+  .imgLogo{
+    width: 160px;
+        height: 90;
+}
   .positionHeader {
     padding: 30px;
     width: 100%;
@@ -14,7 +19,10 @@ export const Main = styled.main`
   .iconBack {
     width: 39px;
     height: 36px;
-    cursor: pointer;
+    
+      cursor: pointer;
+    
+    
   }
   .iconLup {
     height: 15px;
@@ -51,6 +59,10 @@ export const Main = styled.main`
     display: flex;
     gap: 16px;
     align-items: center;
+    img{
+      cursor: pointer;
+    }
+    
   }
   .positionInput {
     position: relative;
@@ -82,6 +94,9 @@ export const Main = styled.main`
   .positionOption {
     display: flex;
     border-left: 2px solid var(--color-white-1);
+    img{
+      cursor: pointer;
+    }
     p,
     span {
       width: 80px;

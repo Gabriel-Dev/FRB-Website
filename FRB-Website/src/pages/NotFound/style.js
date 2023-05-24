@@ -4,7 +4,10 @@ background-color: #15161a;
 width: 100vw;
 height: 100vh;
 opacity: 90%;
-
+ img{
+  width: 180px;
+    height: 90px;
+ }
 .position{
     position: absolute;
     top: 25%;
