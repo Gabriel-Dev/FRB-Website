@@ -6,6 +6,11 @@ import { Button } from "../../components/Button"
 import { Select } from "../../components/Select"
 
 export const Contact = () => {
+
+const teste = (e) =>{
+
+console.log(e)
+}
     return (
         <>
             <Header className="static"/>
@@ -15,7 +20,7 @@ export const Contact = () => {
                         <h2>Comece agora a transformação que a sua empresa precisa</h2>
                         <p>Preencha o formulário para que nossos consultores entrem em contato.</p>
                     </div>
-                    <form>
+                    <form onSubmit={teste}>
                         <div>
                             <Input name="Nome" type="text" placeholder="Digite seu nome"
                             label="Nome*"/>

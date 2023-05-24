@@ -7,8 +7,7 @@ export const Main = styled.main`
   min-width:404px;
 
   .imglogo{
-    width: 190px;
-    height: 90px;
+    width: 160px;
   }
   .positionIconBack {
     display: flex;
@@ -98,7 +97,15 @@ export const Main = styled.main`
     flex-direction:column;
     gap: 30px;
   }
-  
+  .positionEye{
+    position: relative;
+    svg{
+      position: absolute;
+      right: 20px;
+      bottom: 15px;
+     cursor: pointer;
+    }
+  }
   @media(min-width:768px){
     min-height: 100vh;
     .reverse{

@@ -8,6 +8,9 @@ import { UserContext } from "../../contexts/userContext/userContext";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { formSchemaLogin } from "../../schemas";
+import { AiFillEye } from "react-icons/ai";
+import { AiFillEyeInvisible } from "react-icons/ai";
+import { useState} from "react"
 export const CustomerArea = () => {
   const { handleForm } = useContext(UserContext);
   const {
@@ -17,8 +20,18 @@ export const CustomerArea = () => {
   } = useForm({
     resolver: yupResolver(formSchemaLogin),
   });
-  
-
+  const [eye, setEye] = useState(false);
+  const [pass, setPass] = useState("password")
+const viewPass = () =>{
+  if(eye == false){
+setPass("password")
+setEye(true)
+  }
+  else{
+    setPass("text")
+    setEye(false)
+  }
+}
   return (
     <>
       <Main>
@@ -56,15 +69,18 @@ export const CustomerArea = () => {
                             error={errors.email?.message}
                             register={register("email")}
                           ></Input>
-
+                            <div className="positionEye">
                           <Input
                             name="Senha"
-                            type="password"
+                            type={pass}
                             label="Senha"
                             placeholder="Digite sua senha"
                             error={errors.password?.message}
                             register={register("password")}
-                          ></Input>
+                          ></Input>{eye == false?<AiFillEye onClick={viewPass}/>:<AiFillEyeInvisible onClick={viewPass}/>}
+                          
+                          
+                          </div>
                         </div>
                         
                         <Button type="submit" name="Entrar"></Button>
