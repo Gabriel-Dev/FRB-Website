@@ -4,18 +4,12 @@ import { Footer } from "../../components/Footer";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 import { Select } from "../../components/Select";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
 
 export const Contact = () => {
 
-    const contactSubmit = (data) =>{
-      console.log(data)
-    }
+  
     
-    const { register, handleSubmit, formState: { errors }} = useForm({
-        
-    })
+   
   return (
     <>
       <Header className="static" />
@@ -30,14 +24,15 @@ export const Contact = () => {
               contato.
             </p>
           </div>
-          <form onSubmit={handleSubmit(contactSubmit)} noValidate>
+          <form action="https://formsubmit.co/contato@frbconsultoria.com.br" method="POST">
             <div>
               <Input
                 name="name"
                 type="text"
                 placeholder="Digite seu nome"
                 label="Nome*"
-                register={register("name")}
+                required
+                
               />
 
 
@@ -46,7 +41,8 @@ export const Contact = () => {
                 type="email"
                 placeholder="Digite seu email"
                 label="E-mail*"
-                register={register("email")}
+                required
+                
               />
             </div>
             <div>
@@ -55,16 +51,21 @@ export const Contact = () => {
                 type="tel"
                 placeholder="Digite seu telefone"
                 label="Telefone*"
-                register={register("tel")}
+                
               />
               <label>Estado*
-                <Select register={register("state")}/>
+                <Select />
               </label>
             </div>
-            <textarea name="description" placeholder="Sobre o que deseja falar?" {...register("description")} ></textarea>
+            <textarea name="description" placeholder="Sobre o que deseja falar?"  ></textarea>
             <div className="buttonBox">
               <Button type="submit" name="Enviar" />
             </div>
+            <input type="hidden" name="_subject" value="E-mail recebido pelo preenchimento do formulário" />
+            <input type="hidden" name="_honey"  />
+            <input type="hidden" name="_next" value="http://localhost:5173/contato/obrigadopelocontato"/>
+            
+            <input type="hidden" name="_captcha" value="false"/>
           </form>
         </div>
       </Main>

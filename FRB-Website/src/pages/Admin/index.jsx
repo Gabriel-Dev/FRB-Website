@@ -1,10 +1,11 @@
-import FRB from "../../assets/img/logoBranca.png";
+
 import { Main } from "./style";
 import { AiOutlineSearch } from "react-icons/ai";
 import { CreateCompanyModal } from "../../components/Modals/createCompany";
 import { RemoveCompanyModal } from "../../components/Modals/removeCompany";
 import { EditCompanyModal } from "../../components/Modals/editCompany";
 import backLogin from "../../assets/img/IconBackPage.png";
+import FRB from "../../assets/img/logoBranca.png";
 import buttonPlus from "../../assets/img/Button Plus.png";
 import iconEdit from "../../assets/img/Icon Edit.png";
 import iconTrash from "../../assets/img/Icon Trash.png";
