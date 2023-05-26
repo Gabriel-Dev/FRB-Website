@@ -53,7 +53,7 @@ a{  color: unset;
 
     --color-negative: #8B1E1E;
     --color-warning:#FFCD07;
-    --color-sucess:#319A20;
+    --color-green:#319A20;
     --color-sucess:#155BCB;
 
     --title-1: 48px;

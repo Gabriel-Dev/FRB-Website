@@ -25,8 +25,19 @@ export const CreateClient = styled.div`
           font-size: 14px;
           font-weight: 600;
           color: var(--color-primary-2);
+          position: relative;
           input {
             margin: 0;
+          }
+          .error {
+            width: 100%;
+            height: 16px;
+            padding: 8px;
+
+            position: absolute;
+
+            color: var(--color-negative);
+            font-size: 14px;
           }
         }
         select {
@@ -46,7 +57,6 @@ export const CreateClient = styled.div`
           padding: 16px;
           border: 1px solid var(--color-grey-0);
           border-radius: var(--radius-1);
-          
         }
         button {
           background-color: var(--color-primary-1);
@@ -63,7 +73,7 @@ export const CreateClient = styled.div`
       overflow: hidden;
       div {
         height: 100%;
-        
+
         form {
           display: flex;
           flex-direction: row;
@@ -75,7 +85,7 @@ export const CreateClient = styled.div`
             min-width: 45%;
             width: 45%;
           }
-          div{
+          div {
             width: 100%;
             height: max-content;
             display: flex;

@@ -96,8 +96,11 @@ export const EditCompany = styled.div`
               width:65%;
               border-radius:4px
             }
-            button + button {
+            .deactive {
               background-color: var(--color-negative);
+            }
+            .active {
+              background-color: var(--color-green);
             }
           }
         }

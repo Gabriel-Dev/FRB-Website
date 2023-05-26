@@ -7,7 +7,9 @@ import { NotFound } from "../pages/NotFound";
 import { CustomerArea } from "../pages/CustomerArea";
 import { Admin } from "../pages/Admin";
 import { User } from "../pages/Users";
-import {Thanks} from "../pages/thanks"
+import { Thanks } from "../pages/thanks";
+import { ProtectRoutes } from "../components/ProtectRoutes";
+import { MyAdminProvider } from "../Providers/adminProvider";
 export const MainRoutes = () => {
   return (
     <Routes>
@@ -17,8 +19,12 @@ export const MainRoutes = () => {
       <Route path="contato" element={<Contact />} />
       <Route path="contato/obrigadopelocontato" element={<Thanks />} />
       <Route path="areadocliente" element={<CustomerArea />} />
-      <Route path="user" element={<User />} />
-      <Route path="admin" element={<Admin />} />
+      <Route element={<ProtectRoutes />}>
+        <Route path="user" element={<User />} />
+        <Route element={<MyAdminProvider/>}>
+          <Route path="admin" element={<Admin />} />
+        </Route>
+      </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

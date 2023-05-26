@@ -6,32 +6,25 @@ import { Button } from "../../components/Button";
 import { useContext } from "react";
 import { UserContext } from "../../contexts/userContext/userContext";
 import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { formSchemaLogin } from "../../schemas";
-
 import { AiFillEye } from "react-icons/ai";
 import { AiFillEyeInvisible } from "react-icons/ai";
-import { useState} from "react"
+import { useState } from "react";
+import { schemaLogin } from "../../schemas"
+import { yupResolver } from "@hookform/resolvers/yup";
 
 export const CustomerArea = () => {
   const { handleForm } = useContext(UserContext);
-  const { register, handleSubmit, formState: { errors }} = useForm({
-    
+  const [eye, setEye] = useState(true);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    mode: "onBlur",
+    resolver: yupResolver(schemaLogin),
   });
-
-  const [eye, setEye] = useState(false);
-  const [pass, setPass] = useState("password")
-const viewPass = () =>{
-  if(eye == false){
-setPass("password")
-setEye(true)
-  }
-  else{
-    setPass("text")
-    setEye(false)
-  }
-}
-
+  
   return (
     <>
       <Main>
@@ -63,27 +56,32 @@ setEye(true)
                         <p className="textLogin">Login</p>
                         <div className="inputPosition">
                           <Input
-                            name="E-mail"
+                            name="username"
                             type="text"
                             label="E-mail"
                             placeholder="Digite seu email"
-                            error={errors.email?.message}
-                            register={register("email")}
-                          ></Input>
-                            <div className="positionEye">
-                          <Input
-                            name="Senha"
-                            type={pass}
-                            label="Senha"
-                            placeholder="Digite sua senha"
-                            error={errors.password?.message}
-                            register={register("password")}
-                          ></Input>{eye == false?<AiFillEye onClick={viewPass}/>:<AiFillEyeInvisible onClick={viewPass}/>}
-                          
-          
+                            register={register("username")}
+                            error={errors.username && <p className="error">{errors.username.message}</p>}
+                          />
+                         
+                          <div className="positionEye">
+                            <Input
+                              name="password"
+                              type={eye ? "password" : "text"}
+                              label="Senha"
+                              placeholder="Digite sua senha"
+                              register={register("password")}
+                              error={errors.password && <p className="error">{errors.password.message}</p>}
+                            />
+                            {eye ? (
+                              <AiFillEyeInvisible onClick={()=>{setEye(!eye)}} />
+                              ) : (
+                                <AiFillEye onClick={()=>{setEye(!eye)}} />
+                                )}
                           </div>
+                           
                         </div>
-                        
+
                         <Button type="submit" name="Entrar"></Button>
                       </form>
                     </div>

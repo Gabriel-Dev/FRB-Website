@@ -4,6 +4,7 @@ import { notifyErrorLogin, notifySucessLogin } from "../../Toastfy";
 import { useNavigate } from "react-router-dom";
 import { api } from "../../services/api";
 import "react-toastify/dist/ReactToastify.css";
+import jwt_decode from 'jwt-decode';
 
 export const UserContext = createContext({});
 
@@ -15,48 +16,50 @@ export const UserProvider = ({ children }) => {
   const navigate = useNavigate();
 
   const handleForm = async (body) => {
-    console.log(body);
     try {
-      const response = await api.post("users/login", body);
-
+      const response = await api.post("users/login/", body);
+      const decodedToken = jwt_decode(response.data.access)
       window.localStorage.clear();
-      window.localStorage.setItem(
-        "@token",
-        JSON.stringify(response.data.accessToken)
-      );
+      window.localStorage.setItem("@token",
+      JSON.stringify(response.data.access));
+
       notifySucessLogin();
+      
+      decodedToken.user_level == 'admin'? 
+      navigate("/admin") : navigate("/user")
+      
       setLoading(true);
-      navigate("COLOCAR O CAMINHO CERTO");
+      
     } catch (err) {
       console.log(err);
       notifyErrorLogin();
     }
   };
 
-  // useEffect(() => {
-  //   async function loadUser() {
-  //     const token = JSON.parse(localStorage.getItem("@token"));
+  useEffect(() => {
+    async function loadUser() {
+      const token = JSON.parse(localStorage.getItem("@token"));
 
-  //     if (!token) {
-  //       setLoading(false);
-  //       return;
-  //     }
+      if (!token) {
+        setLoading(false);
+        return;
+      }
+      
+      const userId =  jwt_decode(token).user_id 
 
-  //     try {
-  //       const { data } = await api.get("COLOCAR O CAMINHO CERTO", {
-  //         headers: {
-  //           Authorization: `Bearer ${token}`,
-  //         },
-  //       });
-  //       setUser(data);
-  //     } catch (err) {
-  //       console.log(err);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   }
-  //   loadUser();
-  // }, [navigate]);
+      try {
+        api.defaults.headers.common["Authorization"] = `Bearer ${token}`
+        const response = await api.get(`users/${userId}/`);
+        setUser(response.data);
+
+      } catch (err) {
+        console.log(err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    loadUser();
+  }, [navigate]);
 
   return (
     <UserContext.Provider
@@ -70,6 +73,7 @@ export const UserProvider = ({ children }) => {
         setCompanyModal,
         ClientModal,
         setClientModal,
+        navigate,
       }}
     >
       {children}

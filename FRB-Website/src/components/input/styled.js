@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Label = styled.label`
+position: relative;
 input{
     width: 100%;
     height: 45px;
@@ -14,5 +15,15 @@ input{
     ::placeholder{
         color: var(--color-grey-05);
     }
+}
+.error{
+    width: 100%;
+    height: 16px;
+    padding: 8px;
+
+    position: absolute;
+    
+    color: var(--color-negative);
+    font-size: 14px;
 }
 `
