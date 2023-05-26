@@ -63,7 +63,7 @@ export const Contact = () => {
             </div>
             <input type="hidden" name="_subject" value="E-mail recebido pelo preenchimento do formulário" />
             <input type="hidden" name="_honey"  />
-            <input type="hidden" name="_next" value="http://localhost:5173/contato/obrigadopelocontato"/>
+            <input type="hidden" name="_next" value="https://frbconsultoria.com.br/contato/obrigadopelocontato"/>
             
             <input type="hidden" name="_captcha" value="false"/>
           </form>
