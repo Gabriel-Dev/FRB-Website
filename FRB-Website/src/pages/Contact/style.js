@@ -57,7 +57,7 @@ background-color: var(--color-primary-1);
     min-height: 70vh;
         .container{
             flex-direction: row;
-            margin-top: 0;
+            
             .text{
                 width: 50%;
                 padding: 32px;
