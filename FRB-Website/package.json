@@ -13,6 +13,8 @@
     "@hookform/resolvers": "^3.1.0",
     "@types/nodemailer": "^6.4.8",
     "axios": "^1.4.0",
+    "jsonwebtoken": "^9.0.0",
+    "jwt-decode": "^3.1.2",
     "nodemailer": "^6.9.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

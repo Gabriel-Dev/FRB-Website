@@ -2,91 +2,146 @@ import { ModalBackground } from "./ModalBackground";
 import { Button } from "../Button";
 import { Input } from "../Input";
 import { EditCompany } from "./editCompanyStyle";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { UserContext } from "../../contexts/userContext/userContext";
 import { CreateClientModal } from "../../components/Modals/createClient";
 import { RemoveClientModal } from "../../components/Modals/removeClient";
 import { EditClientModal } from "../../components/Modals/editClient";
+import { AdminContext } from "../../contexts/adminContext/adminContext";
+import { useForm } from "react-hook-form";
 
-export const EditCompanyModal = () => {
-  const { setClientModal } = useContext(UserContext)
+export const EditCompanyModal = ({ client }) => {
+  const { setClientModal } = useContext(UserContext);
+  const { users, deactivateUser, updateClient} = useContext(AdminContext);
+  
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    defaultValues:{
+      client_name: client.client_name,
+      cnpj: client.cnpj,
+      password: client.password,
+      tel: client.tel,
+      client_email: client.client_email,
+      corporate_name: client.corporate_name,
+      contract_health: client.contract_health,
+      contract_life: client.contract_life,
+      contract_dental: client.contract_dental,
+    }
+  });
 
   return (
     <EditCompany>
       <ModalBackground size="editCompany">
         <div>
-          <form>
+          <form onSubmit={handleSubmit((body)=>{updateClient(body, client.id)})}>
             <Input
-              name="Nome do Cliente"
+              name="client_name"
               type="text"
               placeholder="Atualize o nome do cliente"
               label="Nome do Cliente"
+              register={register("client_name")}
             />
             <Input
-              name="CNPJ"
+              name="cnpj"
               type="text"
               placeholder="Atualize o cnpj do cliente"
               label="CNPJ"
+              register={register("cnpj")}
             />
             <Input
-              name="Nova Senha"
+              name="password"
               type="password"
               placeholder="Crie uma nova senha"
               label="Nova Senha"
+              register={register("password")}
             />
             <Input
-              name="Telefone"
+              name="tel"
               type="tel"
               placeholder="Atualize o telefone do cliente"
               label="Telefone"
+              register={register("tel")}
             />
             <Input
-              name="E-mail"
+              name="client_email"
               type="email"
-              placeholder="Atualize o e-mail do cliente"
-              label="E-mail*"
+              placeholder="Digite o e-mail do cliente"
+              label="E-mail"
+              register={register("client_email")}
             />
             <Input
-              name="Razão Social"
+              name="corporate_name"
               type="text"
-              placeholder="Atualize razão social do cliente"
-              label="Razão Social"
+              placeholder="Digite a razão social"
+              label="Razão social"
+              register={register("corporate_name")}
             />
             <Input
-              name="Contrato de Saúde"
+              name="contract_health"
               type="text"
-              placeholder="Atualize o contato de saúde"
+              placeholder="Digite o contrato de Saúde"
               label="Contrato de Saúde"
+              register={register("contract_health")}
             />
             <Input
-              name="Contrato de Vida"
+              name="contract_life"
               type="text"
-              placeholder="Atualize o contato de Vida"
-              label="Contato de Vida"
+              placeholder="Digite o contrato de Vida"
+              label="Contrato de Vida"
+              register={register("contract_life")}
             />
             <Input
-              name="Contrato Dental"
+              name="contract_dental"
               type="text"
-              placeholder="Atualize o contrato Dental"
+              placeholder="Digite o contrato Dental"
               label="Contrato Dental"
+              register={register("contract_dental")}
             />
-            <Button type="submit" name="Atualizar">
-              
-            </Button>
+            <Button type="submit" name="Atualizar"></Button>
           </form>
           <div className="positionClient">
             <h3>Gerenciamento de Usuário</h3>
-            <Button type="submit" name="Criar usuário" onClick={()=>{setClientModal(<CreateClientModal/>)}}></Button>
+            <Button
+              type="submit"
+              name="Criar usuário"
+              onClick={() => {
+                setClientModal(<CreateClientModal client_id={client.id} />);
+              }}
+            ></Button>
           </div>
           <ul className="clientList">
-            <li>
-              <span className="close" onClick={()=>{setClientModal(<RemoveClientModal name={"name"}/>)}}> x </span>
-              <h4>Médico</h4>
+            {users ? users.map((user)=>
+            <li key={user.id}>
+              <span
+                className="close"
+                onClick={() => {
+                  setClientModal(<RemoveClientModal name={user.name} user_id={user.id}/>);
+                }}
+              >
+                x
+              </span>
+              <h4>{user.name}</h4>
               <div>
-                <Button type="button" name="Editar" onClick={()=>{setClientModal(<EditClientModal/>)}}></Button>
-                <Button type="button" name="Desativar"></Button>
+                <Button
+                  type="button"
+                  name="Editar"
+                  onClick={() => {
+                    setClientModal(<EditClientModal user={user} />);
+                  }}
+
+                ></Button>
+                <Button 
+                type="button" 
+                name={user.active ? "Desativar" : "Ativar"}
+                onClick={()=>{deactivateUser(user.id, user.active)}}
+                className={!user.active ? "active" : "deactive"}>
+                </Button>
               </div>
             </li>
+            ):null}
           </ul>
         </div>
       </ModalBackground>

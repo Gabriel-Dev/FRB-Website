@@ -4,11 +4,20 @@ export const Main = styled.main`
   background-size: cover;
   background-position:center;
   background-color: var(--color-primary-1);
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: max-content;
+  min-height: 100vh;
+  width: 100%;
   
+  .container{
+    width: 100%;
+    max-width: 1440px;
+  }
   .imgLogo{
     width: 160px;
-        height: 90;
+    height: 90;
 }
   .positionHeader {
     padding: 30px;
@@ -19,10 +28,7 @@ export const Main = styled.main`
   .iconBack {
     width: 39px;
     height: 36px;
-    
       cursor: pointer;
-    
-    
   }
   .iconLup {
     height: 15px;
@@ -92,11 +98,9 @@ export const Main = styled.main`
     padding: 0px 0px 0px 30px;
   }
   .positionOption {
+    width: 100%;
     display: flex;
     border-left: 2px solid var(--color-white-1);
-    img{
-      cursor: pointer;
-    }
     p,
     span {
       width: 80px;
@@ -104,6 +108,12 @@ export const Main = styled.main`
       align-items: center;
       justify-content: center;
       margin-bottom: 5px;
+    }
+
+    svg{
+      color: var(--color-white-1);
+      font-size: 18px;
+      cursor: pointer;
     }
   }
   .positionBussines {

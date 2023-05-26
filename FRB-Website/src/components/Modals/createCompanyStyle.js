@@ -47,7 +47,7 @@ export const CreateCompany = styled.div`
       form {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 32px;
         label {
           text-align: left;
           font-size: 14px;
