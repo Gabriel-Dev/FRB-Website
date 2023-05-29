@@ -1,18 +1,18 @@
 import * as yup from "yup";
-// const passwordType = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/
+const passwordType = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
 
-// export const schemaLogin = yup.object().shape({
-//   email: yup.string().required("Email Obrigatório").email("Email invalido"),
-
-//   password: yup
-//     .string()
-//     .matches(passwordType, {
-//       message:
-//         "Deve conter no minimo 6 caractéres ter letra e número",
-//     })
-//     .required("Senha Obrigatória"),
-
-// });
+export const resetPasswordSchema = yup.object().shape({
+  password: yup
+    .string()
+    .required("Esse campo é obrigatório!")
+    .matches(passwordType, {
+      message: "Deve conter no minimo 6 caractéres ter letra e número",
+    }),
+  confirmPassword: yup
+    .string()
+    .required("Esse campo é obrigatório!")
+    .oneOf([yup.ref("password"), null], "As senhas devem ser iguais"),
+});
 
 export const schemaLogin = yup.object().shape({
   username: yup.string().required("E-mail obrigatório"),
