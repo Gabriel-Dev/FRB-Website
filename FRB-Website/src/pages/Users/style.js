@@ -38,6 +38,12 @@ export const Main = styled.main`
     height: 700px;
     color:red
   }
+  .nameUser{
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    padding:30px;
+  }
   @media (min-width: 768px) {
     
     
