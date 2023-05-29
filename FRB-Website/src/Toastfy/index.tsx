@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
 
 export const notifySucessLogin = () => {
-  toast.success("User", {
+  toast.success("Logado com sucesso!", {
     position: "bottom-right",
     toastId: "YES",
     autoClose: 4000,
@@ -10,11 +10,11 @@ export const notifySucessLogin = () => {
     pauseOnHover: true,
     draggable: true,
     progress: undefined,
-    theme: "dark",
+    theme: "light",
   });
 };
 export const notifyErrorLogin = () => {
-  toast.error("User", {
+  toast.error("E-mail ou Senha invalida!", {
     position: "bottom-right",
     toastId: "YES",
     autoClose: 4000,
@@ -23,6 +23,6 @@ export const notifyErrorLogin = () => {
     pauseOnHover: true,
     draggable: true,
     progress: undefined,
-    theme: "dark",
+    theme: "light",
   });
 };
