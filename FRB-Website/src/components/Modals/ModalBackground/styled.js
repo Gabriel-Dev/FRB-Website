@@ -15,7 +15,7 @@ z-index: 3;
 background-color: var(--color-grey-05);
 
 .modal{
-    background-image: url("src/assets/img/backgroundModal.png");
+    background-image: url(" src/assets/img/backgroundModal.png");
     background-size:contain;
     
     background-position:center;
