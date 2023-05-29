@@ -101,6 +101,7 @@ export const Main = styled.main`
     width: 100%;
     display: flex;
     border-left: 2px solid var(--color-white-1);
+    padding: 0 16px;
     p,
     span {
       width: 80px;
@@ -121,7 +122,7 @@ export const Main = styled.main`
    
     justify-content: space-between; 
     width: 589px;
-    padding: 10px;
+    padding: 10px 32px;
   }
   .positionEditTrash {
     display: flex;

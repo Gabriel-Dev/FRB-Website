@@ -12,6 +12,7 @@ import { resetPasswordSchema } from "../../schemas";
 import { AiFillEye } from "react-icons/ai";
 import { AiFillEyeInvisible } from "react-icons/ai";
 import jwt_decode from 'jwt-decode';
+import { notifyError, notifySucess } from "../../Toastfy";
 
 export const ResetPassword = () => {
   const params = useParams();
@@ -41,17 +42,19 @@ export const ResetPassword = () => {
   });
 
   const resetPassword = async (body) => {
-    const user_id = jwt_decode(token).user_id;
     try {
+      const user_id = jwt_decode(token).user_id;
       const response = await api.patch(`users/${user_id}/`, body, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       });
-      
+      notifySucess("Senha redefinida com sucesso")
       navigate("/areadocliente")
     } catch (err) {
       console.log(err);
+      console.log("teste")
+      notifyError("Não foi possível alterar a senha")
     } 
   };
 

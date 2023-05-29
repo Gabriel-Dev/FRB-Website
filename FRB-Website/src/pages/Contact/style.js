@@ -54,7 +54,7 @@ background-color: var(--color-primary-1);
 }
 
 @media (min-width: 768px) {
-    min-height: 70vh;
+    min-height: 80vh;
         .container{
             flex-direction: row;
             
