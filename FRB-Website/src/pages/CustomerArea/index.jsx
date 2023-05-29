@@ -15,7 +15,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 export const CustomerArea = () => {
   const { handleForm } = useContext(UserContext);
   const [eye, setEye] = useState(true);
-
+  
   const {
     register,
     handleSubmit,

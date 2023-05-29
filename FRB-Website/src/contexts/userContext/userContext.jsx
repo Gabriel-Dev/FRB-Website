@@ -1,6 +1,6 @@
 // eslint-disable-next-line react/prop-types
 import { createContext, useState, useEffect } from "react";
-import { notifyErrorLogin, notifySucessLogin } from "../../Toastfy";
+import { notifyError, notifySucess } from "../../Toastfy";
 import { useNavigate } from "react-router-dom";
 import { api } from "../../services/api";
 import "react-toastify/dist/ReactToastify.css";
@@ -13,6 +13,7 @@ export const UserProvider = ({ children }) => {
   const [CompanyModal, setCompanyModal] = useState(false);
   const [ClientModal, setClientModal] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [userInfo, setUserInfo] = useState("");
   const navigate = useNavigate();
 
   const handleForm = async (body) => {
@@ -22,17 +23,17 @@ export const UserProvider = ({ children }) => {
       window.localStorage.clear();
       window.localStorage.setItem("@token",
       JSON.stringify(response.data.access));
-
-      notifySucessLogin();
+      setUserInfo(decodedToken)
+      
       
       decodedToken.user_level == 'admin'? 
       navigate("/admin") : navigate("/user")
       
       setLoading(true);
-      
+      notifySucess("Logado com sucesso!");
     } catch (err) {
       console.log(err);
-      notifyErrorLogin();
+      notifyError("Email ou senha invalida!");
     }
   };
 
@@ -74,6 +75,7 @@ export const UserProvider = ({ children }) => {
         ClientModal,
         setClientModal,
         navigate,
+        userInfo,
       }}
     >
       {children}

@@ -8,6 +8,24 @@ export const Main = styled.main`
     width: 100%;
     
   }
+  @keyframes animacao{
+0%{opacity: 0;
+        transform: matrix(-100%);}
+/* 25%{opacity: 1;
+        transform: translateX(-75%)}
+50%{opacity: 1;
+        transform: translateX(-50%)}
+75%{opacity: 1;
+        transform: translateX(-25%)} */
+100%{opacity: 1;
+        transform: matrix(0)}
+  }
+   .animation{
+animation-name:animacao;
+animation-duration: 3s;
+/* animation-delay:2s; */
+
+  }
   .textIntro {
     position: absolute;
     top: 15%;
