@@ -7,16 +7,18 @@ import health from "../../assets/img/IconHealth.png";
 import tooth from "../../assets/img/IconTooth.png";
 import iconLifeBlue from "../../assets/img/iconLifeBlue.png";
 
+
 export const Benefits = () => {
+  // data-aos="fade-left" data-aos-easing="linear" data-aos-duration="2000" data-aos-anchor="#trigger-right"
   return (
     <>
       <Header />
       <Main>
-        <div className="positionTextInto">
+        <div className="positionTextInto animation" >
           <img className="imgIntro" src={intro} alt="Introdução a página" />
           <p className="textIntro">Englobado os seguintes Benefícios</p>
         </div>
-        <div className="positionCard">
+        <div className="positionCard" >
           <div className="boxImg cardPosition positionTextBenfits widthbox">
             <img className="imgBenefits " src={tooth} alt="Icone de Dente" />
             <p className="textBenefits controlText widthbox">Dental</p>
@@ -38,8 +40,9 @@ export const Benefits = () => {
             <p className="textBenefits controlText widthbox">Vida</p>
           </div>
         </div>
-        <div>
-          <div className="boxBlue marginTop">
+        <div >
+          <div className="boxBlue marginTop " >
+          
             <div className="positionLayout">
               <img
                 className="imgBenefits marginHealth"
@@ -60,7 +63,7 @@ export const Benefits = () => {
               </p>
             </div>
           </div>
-          <div className="boxWhite">
+          <div className="boxWhite" >
             <div className="positionLayout">
               <img
                 className="imgBenefits marginHealth"
