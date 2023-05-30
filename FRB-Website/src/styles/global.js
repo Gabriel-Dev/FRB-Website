@@ -25,13 +25,24 @@ button{
 
 a{  color: unset;        
     text-decoration: none; 
-    font-weight: 700;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
 } 
 
 .backgroundWhite{
     background-color: var(--color-white-1);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    animation: opacity 0.5s ease;
 }
+
+@keyframes opacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
 .static{
     position: relative;
@@ -39,7 +50,9 @@ a{  color: unset;
     background-color: var(--color-white-1);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
+main{
+  overflow: hidden;
+}
 :root {
     --color-primary-1: #134777;
     --color-primary-2: #0070BA;
@@ -71,5 +84,4 @@ a{  color: unset;
     --radius-1: 4px;
     --radius-2: 8px;
 }
-`
-
+`;

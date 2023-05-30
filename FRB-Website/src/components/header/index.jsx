@@ -9,7 +9,7 @@ export const Header = ({className}) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [scroll, setScroll] = useState(0);
   const navigate = useNavigate();
-
+  
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);

@@ -4,6 +4,7 @@ import { ToastContainer } from "react-toastify";
 import { UserProvider } from "./contexts/userContext/userContext";
 
 import "react-toastify/dist/ReactToastify.css";
+import { Animations } from "./styles/animations";
 function App() {
   return (
     <>
@@ -21,6 +22,7 @@ function App() {
         theme="light"
       />
       <GlobalStyle />
+      <Animations/>
       <UserProvider>
         <Routes />
       </UserProvider>

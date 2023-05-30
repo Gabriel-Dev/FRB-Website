@@ -43,7 +43,7 @@ export const CustomerArea = () => {
           <img className="imglogo" src={FRB} alt="Logo Da FRB" />
         </div>
         <div className="reverse">
-          <div className="positionElipse">
+          <div className="positionElipse slideLeft">
             <div className="positionElipse">
               <div className="positionElipse">
                 <div className="elipse">
@@ -51,7 +51,7 @@ export const CustomerArea = () => {
                     <div className="elipse3">
                       <form
                         onSubmit={handleSubmit(handleForm)}
-                        className="boxLogin"
+                        className="boxLogin "
                       >
                         <p className="textLogin">Login</p>
                         <div className="inputPosition">
@@ -91,7 +91,7 @@ export const CustomerArea = () => {
             </div>
           </div>
           <div className="positionDeskText">
-            <p className="textFooter">
+            <p className="textFooter slideRight">
               Monitore a performance dos seus contratos
             </p>
           </div>

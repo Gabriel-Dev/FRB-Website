@@ -5,6 +5,9 @@ export const Main = styled.main`
   width: 100%;
   height: max-content;
   min-width: 404px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .imglogo {
     width: 160px;
@@ -12,9 +15,12 @@ export const Main = styled.main`
   .positionIconBack {
     display: flex;
     width: 100%;
+    max-width: 1440px;
     padding: 30px;
   }
   .imgIconBack {
+    width: 45px;
+    height: 40px;
     cursor: pointer;
   }
   .positionLogo {
@@ -113,6 +119,7 @@ export const Main = styled.main`
       flex-direction: row-reverse;
       align-items: center;
       justify-content: center;
+      gap: 64px;
     }
     .textFooter {
       width: 400px;

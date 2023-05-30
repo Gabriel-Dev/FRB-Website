@@ -27,7 +27,7 @@ export const ModalBenefits = () => {
   }
 
   return (
-    <Modal>
+    <Modal >
       <Link
         onClick={() => {
           scrollToSmoothly(700, 3000);
