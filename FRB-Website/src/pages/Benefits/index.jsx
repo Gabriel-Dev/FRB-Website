@@ -17,18 +17,17 @@ export const Benefits = () => {
     <>
       <Header />
       <Main>
-        <div className="positionTextInto animation" >
-          <img className="imgIntro" src={intro} alt="Introdução a página" />
-          <p className="textIntro">Englobado os seguintes Benefícios</p>
+        <div className="positionTextInto" >
+          <img className="imgIntro opacity" src={intro} alt="Introdução a página" />
+          <p className="textIntro scale">Englobado os seguintes Benefícios</p>
         </div>
         <div className="positionCard" >
-          <ObserverExample/>
-          <div className="boxImg cardPosition positionTextBenfits widthbox">
+          <div className="boxImg cardPosition positionTextBenfits widthbox slideRight ">
             <img className="imgBenefits " src={tooth} alt="Icone de Dente" />
             <p className="textBenefits controlText widthbox">Dental</p>
           </div>
-          <div className="widthbox">
-            <div className="boxImgHealth cardPositionHealth positionTextBenfits positionHealth widthbox">
+          <div className="widthbox slideDown">
+            <div className="boxImgHealth cardPositionHealth positionTextBenfits positionHealth widthbox ">
               <img
                 className="imgBenefits marginHealth "
                 src={health}
@@ -39,14 +38,13 @@ export const Benefits = () => {
             <div className="whiteBanner widthbox"></div>
             <div className="blueBanner widthbox"> </div>
           </div>
-          <div className="boxImg  positionTextBenfits cardPosition widthbox">
+          <div className="boxImg  positionTextBenfits cardPosition widthbox slideLeft">
             <img className="imgBenefits" src={life} alt="Icone de Vida" />
             <p className="textBenefits controlText widthbox">Vida</p>
           </div>
         </div>
         <div >
-          <div className="boxBlue marginTop " >
-          
+          <div className="boxBlue marginTop slideLeft" >
             <div className="positionLayout">
               <img
                 className="imgBenefits marginHealth"
@@ -67,7 +65,7 @@ export const Benefits = () => {
               </p>
             </div>
           </div>
-          <div className="boxWhite" >
+          <div className="boxWhite slideRight" >
             <div className="positionLayout">
               <img
                 className="imgBenefits marginHealth"
@@ -89,7 +87,7 @@ export const Benefits = () => {
               </p>
             </div>
           </div>
-          <div className="boxBlue">
+          <div className="boxBlue slideLeft">
             <div className="positionLayout">
               <img
                 className="imgBenefits marginHealth"

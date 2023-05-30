@@ -12,11 +12,11 @@ export const OurDifferential = () => {
     <>
       <Header />
       <Main>
-        <img className="imgIntro" src={tech} alt="Imagem de introdução" />
-        <div className="positionCard">
-          <div className="positionText">
+        <img className="imgIntro opacity" src={tech} alt="Imagem de introdução" />
+        <div className="positionCard ">
+          <div className="positionText slideRight">
             <p className="purple">Agilidade</p>
-            <p className="article">
+            <p className="article ">
               Nós entendemos que burocracia e papelada excessiva podem ser
               fontes de frustração. É por isso que desenvolvemos processos
               simplificados que garantem a agilidade na contratação do seguro de
@@ -24,13 +24,13 @@ export const OurDifferential = () => {
             </p>
           </div>
           <img
-            className="imgCard "
+            className="imgCard slideLeft"
             src={agility}
             alt="Imagem sobre agilidade"
           />
         </div>
         <div className="positionCard invert">
-          <div className="positionText">
+          <div className="positionText slideLeft">
             <p className="purple">Flexibilidade</p>
             <p className="article">
               Entendemos que cada indivíduo e empresa possuem necessidades
@@ -40,13 +40,13 @@ export const OurDifferential = () => {
             </p>
           </div>
           <img
-            className="imgCard"
+            className="imgCard slideRight"
             src={flexibility}
             alt="Imagem sobre agilidade"
           />
         </div>
         <div className="positionCard">
-          <div className="positionText">
+          <div className="positionText slideRight">
             <p className="purple">Simplicidade</p>
             <p className="article">
               Tornar o processo de solicitação de seguro de vida simples e sem
@@ -57,13 +57,13 @@ export const OurDifferential = () => {
             </p>
           </div>
           <img
-            className="imgCard"
+            className="imgCard slideLeft"
             src={simplicity}
             alt="Imagem sobre agilidade"
           />
         </div>
         <div className="positionCard invert">
-          <div className="positionText">
+          <div className="positionText slideLeft">
             <p className="purple">Tecnologia</p>
             <p className="article">
               Possuímos tecnologia de ponta para visualização de dados em Power
@@ -72,13 +72,13 @@ export const OurDifferential = () => {
             </p>
           </div>
           <img
-            className="imgCard"
+            className="imgCard slideRight"
             src={technology}
             alt="Imagem sobre agilidade"
           />
         </div>
         <div className="positionCard">
-          <div className="positionText">
+          <div className="positionText slideRight">
             <p className="purple">Zelo</p>
             <p className="article">
               {" "}
@@ -90,7 +90,7 @@ export const OurDifferential = () => {
             </p>
           </div>
           <img
-            className="imgCard imgzeal"
+            className="imgCard imgzeal slideLeft"
             src={zeal}
             alt="Imagem sobre agilidade"
           />

@@ -1,6 +1,6 @@
 import { MenuStyle } from "./styled";
-import { FiMenu } from "react-icons/fi"
-import { MenuContainer } from "./menuContainer"
+import { FiMenu } from "react-icons/fi";
+import { MenuContainer } from "./menuContainer";
 import { useState } from "react";
 
 export const MenuBox = () => {
@@ -8,14 +8,25 @@ export const MenuBox = () => {
 
   return (
     <>
-      <FiMenu onClick={()=>{setOpenMenu(!openMenu)}}/>
-      {
-       openMenu ? <MenuStyle>
-       <p className="menu">menu</p>
-       <p className="close" onClick={()=>{setOpenMenu(false)}}>x</p>
-       <MenuContainer/>
-     </MenuStyle> : null
-      }
+      <FiMenu
+        onClick={() => {
+          setOpenMenu(!openMenu);
+        }}
+      />
+      {openMenu ? (
+        <MenuStyle>
+          <p className="menu">menu</p>
+          <p
+            className="close"
+            onClick={() => {
+              setOpenMenu(false);
+            }}
+          >
+            x
+          </p>
+          <MenuContainer />
+        </MenuStyle>
+      ) : null}
     </>
   );
 };

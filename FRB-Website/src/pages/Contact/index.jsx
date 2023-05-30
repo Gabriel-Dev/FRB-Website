@@ -6,10 +6,6 @@ import { Button } from "../../components/Button";
 import { Select } from "../../components/Select";
 
 export const Contact = () => {
-
-  
-    
-   
   return (
     <>
       <Header className="static" />
@@ -32,7 +28,6 @@ export const Contact = () => {
                 placeholder="Digite seu nome"
                 label="Nome*"
                 required
-                
               />
 
 

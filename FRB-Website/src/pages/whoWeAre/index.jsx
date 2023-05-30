@@ -15,11 +15,11 @@ export const WhoWeAre = () => {
     <>
       <Header />
       <Main>
-        <div className="handsImg">
+        <div className="handsImg opacity">
           <img src={hands} alt="imagens relacionadas a medicina" />
         </div>
         <section>
-          <div className="whyFRB">
+          <div className="whyFRB slideLeft">
             <h3>Por que a FRB?</h3>
             <div>
               <p>
@@ -38,7 +38,7 @@ export const WhoWeAre = () => {
             </div>
           </div>
         </section>
-        <div className="fatherImg">
+        <div className="fatherImg slideRight">
           <div>
             <img src={father} alt="imagem pai e filha" />
             <p>Nossa prioridade é o seu bem-estar.</p>
