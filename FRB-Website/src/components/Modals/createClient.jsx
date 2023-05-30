@@ -34,7 +34,7 @@ export const CreateClientModal = ({client_id}) => {
               error={errors.name && <p className="error">{errors.name.message}</p>}
             />
             <Input
-              name="power_bi_link somente o App"
+              name="power_bi_link"
               type="text"
               placeholder="Digite o link power Bi"
               label="Link Power Bi somente o App"
