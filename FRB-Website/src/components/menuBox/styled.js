@@ -25,7 +25,7 @@ export const MenuStyle = styled.div`
         width: 100%;
         height: 100%;
 
-        margin-top: 32px;
+        
     }
 
     .close{
@@ -34,11 +34,7 @@ export const MenuStyle = styled.div`
         top: 16px;
         font-size: 20px;
     }
-    .menu{
-        position: absolute;
-        left: 16px;
-        top: 20px;
-    }
+   
 
    
 
