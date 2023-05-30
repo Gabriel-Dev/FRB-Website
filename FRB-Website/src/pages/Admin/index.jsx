@@ -13,6 +13,7 @@ import { UserContext } from "../../contexts/userContext/userContext";
 import { AdminContext } from "../../contexts/adminContext/adminContext";
 
 export const Admin = () => {
+ 
   const columnNames = [
     "Clientes",
     "Usuários",
@@ -25,15 +26,15 @@ export const Admin = () => {
 
   const { CompanyModal, setCompanyModal, ClientModal, user, navigate } =
     useContext(UserContext);
-  const { clients, setUsers} = useContext(AdminContext);
+  const {target,  clients, setUsers,filter, filterClientOn,filterClient } = useContext(AdminContext);
 
   useEffect(() => {
     user.user_level !== "admin" ? navigate("/") : null;
   }, []);
-
+  console.log("34",filterClient)
+  console.log("35", filter)
   return (
     <Main>
-      
       <div className="container">
         <div className="borderBotton">
           <div className="positionHeader">
@@ -68,7 +69,11 @@ export const Admin = () => {
             </div>
           </div>
           <form className="positionInput">
-            <input type="text" placeholder="Digite o nome do cliente" />
+            <input
+              onChange={(event) => filterClientOn(event)}
+              type="text"
+              placeholder="Digite o nome do cliente"
+            />
             <button className="iconLup">
               <AiOutlineSearch />
             </button>
@@ -83,8 +88,8 @@ export const Admin = () => {
             </div>
           </div>
           <ul className="positionOption">
-            {clients
-              ? clients.map((client) => (
+            {target 
+              ? (filter.map((client) => (
                   <li key={client.id} className="positionBussines">
                     <p>{client.client_name}</p>
                     <p>{client.users.length}</p>
@@ -95,7 +100,9 @@ export const Admin = () => {
                       {
                         <BsThreeDotsVertical
                           onClick={() => {
-                            setCompanyModal(<EditCompanyModal client={client}/>);
+                            setCompanyModal(
+                              <EditCompanyModal client={client} />
+                            );
                             setUsers(client.users);
                           }}
                         />
@@ -103,16 +110,55 @@ export const Admin = () => {
                     </span>
                     <span>
                       {
-                        <TbTrash 
+                        <TbTrash
                           onClick={() => {
-                            setCompanyModal(<RemoveCompanyModal name={client.client_name} client_id={client.id}/>);
+                            setCompanyModal(
+                              <RemoveCompanyModal
+                                name={client.client_name}
+                                client_id={client.id}
+                              />
+                            );
                           }}
                         />
                       }
                     </span>
                   </li>
-                ))
-              : null}
+                )))
+              :(filterClient.map((client) => (
+                  <li key={client.id} className="positionBussines">
+                    <p>{client.client_name}</p>
+                    <p>{client.users.length}</p>
+                    <p>{client.cnpj}</p>
+                    <p>{client.tel}</p>
+                    <p>{client.client_email}</p>
+                    <span>
+                      {
+                        <BsThreeDotsVertical
+                          onClick={() => {
+                            setCompanyModal(
+                              <EditCompanyModal client={client} />
+                            );
+                            setUsers(client.users);
+                          }}
+                        />
+                      }
+                    </span>
+                    <span>
+                      {
+                        <TbTrash
+                          onClick={() => {
+                            setCompanyModal(
+                              <RemoveCompanyModal
+                                name={client.client_name}
+                                client_id={client.id}
+                              />
+                            );
+                          }}
+                        />
+                      }
+                    </span>
+                  </li>
+                )))}
           </ul>
         </section>
         {CompanyModal ? CompanyModal : null}
