@@ -12,11 +12,15 @@ export const AdminProvider = ({ children }) => {
     useContext(UserContext);
   const [clients, setClients] = useState(null);
   const [users, setUsers] = useState(null);
+  const [filterClient, setFilterClient] = useState([]);
+  const [filter, setFilter] = useState([]);
+  const [target, setTarget] = useState("");
 
   useEffect(() => {
     async function getClients() {
       try {
         const response = await api.get(`clients/`);
+        setFilterClient(response.data.results);
         setClients(response.data.results);
       } catch (err) {
         console.log(err);
@@ -91,7 +95,7 @@ export const AdminProvider = ({ children }) => {
   const createClient = async (body) => {
     try {
       const response = await api.post(`clients/`, body);
-      setClients((await api.get(`clients/`)).data.results); 
+      setClients((await api.get(`clients/`)).data.results);
       setCompanyModal(false);
       notifySucess("Cliente criado com sucesso!");
     } catch (err) {
@@ -130,6 +134,14 @@ export const AdminProvider = ({ children }) => {
     }
   };
 
+  function filterClientOn(event) {
+    
+    setTarget(event.target.value)
+    const filter = clients.filter((elem) =>
+      elem.client_name.toLowerCase().includes(event.target.value.toLowerCase())
+    );
+    setFilter(filter);
+  }
   return (
     <AdminContext.Provider
       value={{
@@ -143,6 +155,13 @@ export const AdminProvider = ({ children }) => {
         createClient,
         updateClient,
         deleteClient,
+        filterClient,
+        setFilterClient,
+        filterClientOn,
+        filter, 
+        setFilter,
+        target, 
+        setTarget
       }}
     >
       {children}

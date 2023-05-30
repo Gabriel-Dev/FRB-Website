@@ -6,10 +6,13 @@ import life from "../../assets/img/IconLife.png";
 import health from "../../assets/img/IconHealth.png";
 import tooth from "../../assets/img/IconTooth.png";
 import iconLifeBlue from "../../assets/img/iconLifeBlue.png";
-
-
+import ObserverExample from "../../components/Observer"
+import { useContext } from "react";
+import { UserContext } from "../../contexts/userContext/userContext";
 export const Benefits = () => {
-  // data-aos="fade-left" data-aos-easing="linear" data-aos-duration="2000" data-aos-anchor="#trigger-right"
+  const { observer, 
+    setObserver } = useContext(UserContext);
+    console.log(observer)
   return (
     <>
       <Header />
@@ -19,6 +22,7 @@ export const Benefits = () => {
           <p className="textIntro">Englobado os seguintes Benefícios</p>
         </div>
         <div className="positionCard" >
+          <ObserverExample/>
           <div className="boxImg cardPosition positionTextBenfits widthbox">
             <img className="imgBenefits " src={tooth} alt="Icone de Dente" />
             <p className="textBenefits controlText widthbox">Dental</p>
