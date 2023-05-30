@@ -41,7 +41,7 @@ export const Admin = () => {
               className="iconBack"
               src={backLogin}
               onClick={() => {
-                window.history.back();
+                navigate("/areadocliente");
               }}
               alt="Menu para voltar a página"
             />
