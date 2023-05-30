@@ -34,10 +34,10 @@ export const CreateClientModal = ({client_id}) => {
               error={errors.name && <p className="error">{errors.name.message}</p>}
             />
             <Input
-              name="power_bi_link"
+              name="power_bi_link somente o App"
               type="text"
               placeholder="Digite o link power Bi"
-              label="Link Power Bi"
+              label="Link Power Bi somente o App"
               register={register("power_bi_link")}
               error={errors.power_bi_link && <p className="error">{errors.power_bi_link.message}</p>}
             />
