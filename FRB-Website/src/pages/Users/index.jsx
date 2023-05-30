@@ -1,11 +1,13 @@
 import {Main} from "./style"
+import React from 'react';
 import { UserContext } from "../../contexts/userContext/userContext";
 import { useContext } from "react";
 import FRB from "../../assets/img/FRB.png";
 import {BsArrowLeftCircle} from "react-icons/bs"
 export const User = () => {
   const { userInfo } = useContext(UserContext);
-   console.log(userInfo)
+   console.log(userInfo.power_bi_link)
+   const stringHTML = userInfo.power_bi_link?userInfo.power_bi_link:null;
     return (
 <Main>
 <div className="borderBotton">
@@ -22,7 +24,8 @@ export const User = () => {
       </div>
       <p className="nameUser">Seja bem-vindo {userInfo.name}!</p>
       <div className="positionBi">
-      {userInfo.power_bi_link}
+
+      <div dangerouslySetInnerHTML={{ __html: stringHTML }}></div>
       </div>
     
 </Main>
