@@ -21,7 +21,7 @@ export const AdminProvider = ({ children }) => {
       try {
         const response = await api.get(`clients/`);
         setFilterClient(response.data.results);
-        
+        setClients(response.data.results)
       } catch (err) {
         console.log(err);
       } finally {

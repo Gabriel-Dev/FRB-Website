@@ -73,7 +73,7 @@ export const Admin = () => {
               type="text"
               placeholder="Digite o nome do cliente"
             />
-            <button className="iconLup">
+            <button type="button" className="iconLup">
               <AiOutlineSearch />
             </button>
           </form>
@@ -87,7 +87,7 @@ export const Admin = () => {
             </div>
           </div>
           <ul className="positionOption">
-            {target 
+            {target && filter 
               ? (filter.map((client) => (
                   <li key={client.id} className="positionBussines opacity-2">
                     <p>{client.client_name}</p>

@@ -11,8 +11,9 @@ import { AiFillEyeInvisible } from "react-icons/ai";
 import { useState } from "react";
 import { schemaLogin } from "../../schemas"
 import { yupResolver } from "@hookform/resolvers/yup";
-
+import { useNavigate } from "react-router";
 export const CustomerArea = () => {
+  const navigate = useNavigate()
   const { handleForm } = useContext(UserContext);
   const [eye, setEye] = useState(true);
   
@@ -34,7 +35,7 @@ export const CustomerArea = () => {
             src={backLogin}
             alt="Icone para Voltar"
             onClick={() => {
-              window.history.back();
+              navigate("/");
             }}
           />
         </div>
