@@ -6,7 +6,7 @@ import { EditCompanyModal } from "../../components/Modals/editCompany";
 import backLogin from "../../assets/img/IconBackPage.png";
 import FRB from "../../assets/img/logoBranca.png";
 import buttonPlus from "../../assets/img/Button Plus.png";
-import { BsThreeDotsVertical } from "react-icons/bs";
+import {FiEdit} from "react-icons/fi"
 import { TbTrash } from "react-icons/tb";
 import { useContext, useEffect } from "react";
 import { UserContext } from "../../contexts/userContext/userContext";
@@ -31,8 +31,7 @@ export const Admin = () => {
   useEffect(() => {
     user.user_level !== "admin" ? navigate("/") : null;
   }, []);
-  console.log("34",filterClient)
-  console.log("35", filter)
+ 
   return (
     <Main>
       <div className="container">
@@ -42,7 +41,7 @@ export const Admin = () => {
               className="iconBack"
               src={backLogin}
               onClick={() => {
-                window.history.back();
+                navigate("/areadocliente");
               }}
               alt="Menu para voltar a página"
             />
@@ -98,7 +97,7 @@ export const Admin = () => {
                     <p>{client.client_email}</p>
                     <span>
                       {
-                        <BsThreeDotsVertical
+                        <FiEdit
                           onClick={() => {
                             setCompanyModal(
                               <EditCompanyModal client={client} />
@@ -133,7 +132,7 @@ export const Admin = () => {
                     <p>{client.client_email}</p>
                     <span>
                       {
-                        <BsThreeDotsVertical
+                        <FiEdit
                           onClick={() => {
                             setCompanyModal(
                               <EditCompanyModal client={client} />

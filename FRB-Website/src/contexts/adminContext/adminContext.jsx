@@ -21,7 +21,7 @@ export const AdminProvider = ({ children }) => {
       try {
         const response = await api.get(`clients/`);
         setFilterClient(response.data.results);
-        setClients(response.data.results);
+        
       } catch (err) {
         console.log(err);
       } finally {
@@ -95,7 +95,7 @@ export const AdminProvider = ({ children }) => {
   const createClient = async (body) => {
     try {
       const response = await api.post(`clients/`, body);
-      setClients((await api.get(`clients/`)).data.results);
+      setFilterClient((await api.get(`clients/`)).data.results);
       setCompanyModal(false);
       notifySucess("Cliente criado com sucesso!");
     } catch (err) {
@@ -109,7 +109,7 @@ export const AdminProvider = ({ children }) => {
   const updateClient = async (body, client_id) => {
     try {
       const response = await api.patch(`clients/${client_id}/`, body);
-      setClients((await api.get(`clients/`)).data.results);
+      setFilterClient((await api.get(`clients/`)).data.results);
       setCompanyModal(false);
       notifySucess("Cliente atualizado com sucesso!");
     } catch (err) {
@@ -123,7 +123,7 @@ export const AdminProvider = ({ children }) => {
   const deleteClient = async (client_id) => {
     try {
       const response = await api.delete(`clients/${client_id}/`);
-      setClients((await api.get(`clients/`)).data.results);
+      setFilterClient((await api.get(`clients/`)).data.results);
       setCompanyModal(false);
       notifySucess("Cliente deletado com sucesso!");
     } catch (err) {

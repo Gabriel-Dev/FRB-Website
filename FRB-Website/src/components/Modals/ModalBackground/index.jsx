@@ -7,9 +7,9 @@ export const ModalBackground = ({ children, size }) => {
     useContext(UserContext);
 
   return (
-    <ModalBackgroundStyle
+    <ModalBackgroundStyle className="closeModal"
       onClick={(e) =>
-        e.target.className == "sc-jJTsDX BObWW"
+        e.target.className.includes("closeModal")
           ? ClientModal
             ? setClientModal(false)
             : setCompanyModal(false)

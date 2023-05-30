@@ -39,7 +39,7 @@ export const EditClientModal = ({user, client_id}) => {
               name="power_bi_link"
               type="text"
               placeholder="Atualize o link Power Bi"
-              label="Link Power Bi"
+              label="Link Power Bi somente o App"
               register={register("power_bi_link")}
             />
             <Input
