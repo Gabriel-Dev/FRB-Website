@@ -5,7 +5,7 @@ import { AdminContext } from "../../contexts/adminContext/adminContext";
 import { useContext } from "react";
 import { UserContext } from "../../contexts/userContext/userContext";
 
-export const RemoveClientModal = ({name, user_id}) => {
+export const RemoveClientModal = ({name, user_id, client_id}) => {
   const { deleteUser } = useContext(AdminContext);
   const { setClientModal } = useContext(UserContext);
 
@@ -17,7 +17,7 @@ export const RemoveClientModal = ({name, user_id}) => {
             <div>
               <span>
                 <Button type="button" name="cancelar" onClick={()=>{setClientModal(false)}}/>
-                <Button type="button" name="Sim, tenho certeza" onClick={()=>{deleteUser(user_id)}}/>
+                <Button type="button" name="Sim, tenho certeza" onClick={()=>{deleteUser(user_id, client_id)}}/>
               </span>
             </div>
           </ModalBackground>

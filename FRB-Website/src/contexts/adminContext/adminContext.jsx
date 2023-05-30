@@ -38,7 +38,7 @@ export const AdminProvider = ({ children }) => {
 
     try {
       const response = await api.post(`users/`, body);
-      setUsers((await api.get(`users/`)).data.results);
+      setUsers((await api.get(`users/`)).data.results.filter((user)=>user.client_id == client_id));
       setClientModal(false);
       notifySucess("Usuário criado com sucesso!");
     } catch (err) {
@@ -49,10 +49,10 @@ export const AdminProvider = ({ children }) => {
     }
   };
 
-  const updateUser = async (body, user_id) => {
+  const updateUser = async (body, user_id, client_id) => {
     try {
       const response = await api.patch(`users/${user_id}/`, body);
-      setUsers((await api.get(`users/`)).data.results);
+      setUsers((await api.get(`users/`)).data.results.filter((user)=>user.client_id == client_id));
       setClientModal(false);
       notifySucess("Usuário atualizado com sucesso!");
     } catch (err) {
@@ -63,10 +63,10 @@ export const AdminProvider = ({ children }) => {
     }
   };
 
-  const deleteUser = async (user_id) => {
+  const deleteUser = async (user_id, client_id) => {
     try {
       const response = await api.delete(`users/${user_id}/`);
-      setUsers((await api.get(`users/`)).data.results);
+      setUsers((await api.get(`users/`)).data.results.filter((user)=>user.client_id == client_id));
       setClientModal(false);
       notifySucess("Usuário deletado com sucesso!");
     } catch (err) {
@@ -77,12 +77,12 @@ export const AdminProvider = ({ children }) => {
     }
   };
 
-  const deactivateUser = async (user_id, active) => {
+  const deactivateUser = async (user_id, active, client_id) => {
     try {
       const response = await api.patch(`users/${user_id}/`, {
         active: !active,
       });
-      setUsers((await api.get(`users/`)).data.results);
+      setUsers((await api.get(`users/`)).data.results.filter((user)=>user.client_id == client_id));
       notifySucess("Usuário desativado com sucesso!");
     } catch (err) {
       console.log(err);

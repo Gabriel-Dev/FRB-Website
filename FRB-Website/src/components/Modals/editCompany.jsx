@@ -114,11 +114,11 @@ export const EditCompanyModal = ({ client }) => {
           </div>
           <ul className="clientList">
             {users ? users.map((user)=>
-            <li key={user.id}>
+            <li key={user.id} className="opacity-2">
               <span
                 className="close"
                 onClick={() => {
-                  setClientModal(<RemoveClientModal name={user.name} user_id={user.id}/>);
+                  setClientModal(<RemoveClientModal name={user.name} user_id={user.id} client_id={client.id}/>);
                 }}
               >
                 x
@@ -129,14 +129,14 @@ export const EditCompanyModal = ({ client }) => {
                   type="button"
                   name="Editar"
                   onClick={() => {
-                    setClientModal(<EditClientModal user={user} />);
+                    setClientModal(<EditClientModal user={user} client_id={client.id}/>);
                   }}
 
                 ></Button>
                 <Button 
                 type="button" 
                 name={user.active ? "Desativar" : "Ativar"}
-                onClick={()=>{deactivateUser(user.id, user.active)}}
+                onClick={()=>{deactivateUser(user.id, user.active, client.id)}}
                 className={!user.active ? "active" : "deactive"}>
                 </Button>
               </div>

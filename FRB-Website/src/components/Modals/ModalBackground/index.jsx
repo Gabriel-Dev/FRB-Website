@@ -16,7 +16,7 @@ export const ModalBackground = ({ children, size }) => {
           : null
       }
     >
-      <div className={"modal " + size}>
+      <div className={"modal opacity-2 " + size}>
         <span
           className="close"
           onClick={() => {

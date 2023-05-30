@@ -6,7 +6,7 @@ import { AdminContext } from "../../contexts/adminContext/adminContext";
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 
-export const EditClientModal = ({user}) => {
+export const EditClientModal = ({user, client_id}) => {
   const { updateUser } = useContext(AdminContext);
 
   const {
@@ -27,7 +27,7 @@ export const EditClientModal = ({user}) => {
     <EditClient>
       <ModalBackground size="editClient">
         <div>
-          <form onSubmit={handleSubmit((body)=>{updateUser(body,user.id)})}>
+          <form onSubmit={handleSubmit((body)=>{updateUser(body,user.id, client_id)})}>
             <Input
               name="name"
               type="text"
