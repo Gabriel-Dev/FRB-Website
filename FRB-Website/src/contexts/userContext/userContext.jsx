@@ -14,6 +14,7 @@ export const UserProvider = ({ children }) => {
   const [ClientModal, setClientModal] = useState(false);
   const [loading, setLoading] = useState(true);
   const [userInfo, setUserInfo] = useState("");
+  const [observer, setObserver] = useState("");
   const navigate = useNavigate();
 
   const handleForm = async (body) => {
@@ -75,7 +76,8 @@ export const UserProvider = ({ children }) => {
         ClientModal,
         setClientModal,
         navigate,
-        userInfo,
+        userInfo,observer, 
+        setObserver
       }}
     >
       {children}
