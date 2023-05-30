@@ -26,7 +26,7 @@ export const Admin = () => {
 
   const { CompanyModal, setCompanyModal, ClientModal, user, navigate } =
     useContext(UserContext);
-  const {target,  clients, setUsers,filter, filterClientOn,filterClient } = useContext(AdminContext);
+  const {target, setUsers,filter, filterClientOn,filterClient } = useContext(AdminContext);
 
   useEffect(() => {
     user.user_level !== "admin" ? navigate("/") : null;
@@ -90,7 +90,7 @@ export const Admin = () => {
           <ul className="positionOption">
             {target 
               ? (filter.map((client) => (
-                  <li key={client.id} className="positionBussines">
+                  <li key={client.id} className="positionBussines opacity-2">
                     <p>{client.client_name}</p>
                     <p>{client.users.length}</p>
                     <p>{client.cnpj}</p>
@@ -125,7 +125,7 @@ export const Admin = () => {
                   </li>
                 )))
               :(filterClient.map((client) => (
-                  <li key={client.id} className="positionBussines">
+                  <li key={client.id} className="positionBussines opacity-2">
                     <p>{client.client_name}</p>
                     <p>{client.users.length}</p>
                     <p>{client.cnpj}</p>

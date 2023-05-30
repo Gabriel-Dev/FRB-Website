@@ -17,6 +17,10 @@ export const Animations = createGlobalStyle`
     animation: opacity 2s;
 }
 
+.opacity-2{
+    animation: opacity 1s;
+}
+
 .scale{
     animation: scale 2s;
 }
