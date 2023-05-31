@@ -15,7 +15,7 @@ export const MenuBox = () => {
       />
       {openMenu ? (
         <MenuStyle>
-          <p className="menu">menu</p>
+          
           <p
             className="close"
             onClick={() => {

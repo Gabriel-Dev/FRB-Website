@@ -8,6 +8,7 @@ export const MenuStyle = styled.div`
   justify-content: flex-end;
   gap: 24px;
   padding: 32px 16px;
+  
 
   a {
     font-weight: 600;
@@ -27,8 +28,11 @@ export const MenuStyle = styled.div`
     margin: 0;
     position: relative;
   }
-  main {
+  
+  @media (min-width: 768px) {
+    main {
     position: absolute;
     top: -80px;
+  }
   }
 `;

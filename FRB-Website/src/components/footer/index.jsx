@@ -14,8 +14,8 @@ export const Footer = () => {
         <div>
           <h3>Email para contato</h3>
           <p>contato@frbconsultoria.com.br</p>
-          <h3>Telefone para contato</h3>
-          <p>(xx)xxxxx-xxxx</p>
+          {/* <h3>Telefone para contato</h3>
+          <p>(xx)xxxxx-xxxx</p> */}
         </div>
         <div className="about">
           <h3>Sobre</h3>
