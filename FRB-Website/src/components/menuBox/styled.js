@@ -9,10 +9,10 @@ export const MenuStyle = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 1;
+    
     
     width: 40%;
-    height: max-content;
+    
     
     background-color: var(--color-white-1);
     box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.5);

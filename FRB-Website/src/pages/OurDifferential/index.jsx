@@ -9,15 +9,41 @@ import flexibility from "../../assets/img/flexibility.png";
 import simplicity from "../../assets/img/simplicity.png";
 import technology from "../../assets/img/technology.png";
 import zeal from "../../assets/img/zeal.png";
+import { useState, useEffect } from "react"
 export const OurDifferential = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [autoplay, setAutoplay] = useState(false);
+  
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+    window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  
+  useEffect(() => {
+    if (windowWidth > 765) {
+      setAutoplay(true);
+      
+    } else {
+      setAutoplay(false);
+      
+    }
+  }, [windowWidth]);
+  console.log(windowWidth)
   return (
     <>
       <Header />
       <Main>
-        {/* <img className="imgIntro" src={tech} alt="Imagem de introdução" /> */}
-        <div className="positionView">
-        <video src={mp4video} autoPlay loop muted></video>
+         
+        <div className="positionView opacity">
+          {autoplay?<video src={mp4video} loop muted autoPlay={autoplay} ></video>:<img className="imgIntro" src={tech} alt="Imagem de introdução" />}
+        
         <div className="positionIconP">
+          
         <p className="view">Veja abaixo o diferencial da equipe FRB.</p>
         <BsChevronDoubleDown/></div>
         </div>
