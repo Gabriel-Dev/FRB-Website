@@ -2,6 +2,8 @@ import { Main } from "./style";
 import { Header } from "../../components/header";
 import { Footer } from "../../components/Footer";
 import tech from "../../assets/img/tech.png";
+import {BsChevronDoubleDown} from "react-icons/bs"
+import mp4video from "../../assets/img/mp4video.mp4";
 import agility from "../../assets/img/agillity.png";
 import flexibility from "../../assets/img/flexibility.png";
 import simplicity from "../../assets/img/simplicity.png";
@@ -12,7 +14,13 @@ export const OurDifferential = () => {
     <>
       <Header />
       <Main>
-        <img className="imgIntro opacity" src={tech} alt="Imagem de introdução" />
+        {/* <img className="imgIntro" src={tech} alt="Imagem de introdução" /> */}
+        <div className="positionView">
+        <video src={mp4video} autoPlay loop muted></video>
+        <div className="positionIconP">
+        <p className="view">Veja abaixo o diferencial da equipe FRB.</p>
+        <BsChevronDoubleDown/></div>
+        </div>
         <div className="positionCard ">
           <div className="positionText slideRight">
             <p className="purple">Agilidade</p>

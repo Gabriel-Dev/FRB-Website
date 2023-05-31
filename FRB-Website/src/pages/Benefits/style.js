@@ -4,13 +4,17 @@ export const Main = styled.main`
   .positionTextInto {
     position: relative;
   }
-  .imgIntro {
+  /* .imgIntro {
     width: 100%;
     height: 400px;
     object-fit: cover;
-  }
+  } */
+video{
+width: 100%;
+object-fit: cover;
+}
 
-  .textIntro {
+.textIntro {
     position: absolute;
     top: 20%;
     left: 5%;

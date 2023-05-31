@@ -6,7 +6,7 @@ import life from "../../assets/img/IconLife.png";
 import health from "../../assets/img/IconHealth.png";
 import tooth from "../../assets/img/IconTooth.png";
 import iconLifeBlue from "../../assets/img/iconLifeBlue.png";
-
+import mp4videobenefics from "../../assets/img/mp4videobenefics.mp4"
 import { useContext } from "react";
 import { UserContext } from "../../contexts/userContext/userContext";
 export const Benefits = () => {
@@ -17,7 +17,8 @@ export const Benefits = () => {
       <Header />
       <Main>
         <div className="positionTextInto" >
-          <img className="imgIntro opacity" src={intro} alt="Introdução a página" />
+          {/* <img className="imgIntro opacity" src={intro} alt="Introdução a página" /> */}
+          <video autoPlay loop muted src={mp4videobenefics}></video>
           <p className="textIntro scale">Englobado os seguintes Benefícios</p>
         </div>
         <div className="positionCard" >

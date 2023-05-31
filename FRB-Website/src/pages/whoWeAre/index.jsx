@@ -9,13 +9,17 @@ import selfManagement from "../../assets/img/selfManagement.png";
 import apart from "../../assets/img/apart.png";
 import BI from "../../assets/img/BI.png";
 import medic from "../../assets/img/medic.png";
+// import Carousel from "react-elastic-carousel"
 
 export const WhoWeAre = () => {
+ 
   return (
     <>
       <Header />
       <Main>
+        
         <div className="handsImg opacity">
+        
           <img src={hands} alt="imagens relacionadas a medicina" />
         </div>
         <section>
