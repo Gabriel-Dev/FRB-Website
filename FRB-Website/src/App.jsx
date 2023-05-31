@@ -6,6 +6,11 @@ import { UserProvider } from "./contexts/userContext/userContext";
 import "react-toastify/dist/ReactToastify.css";
 import { Animations } from "./styles/animations";
 function App() {
+
+if(window.location.href.includes("frbseguros.com.br")|| window.location.href == "http://frbconsultoria.com.br/" ){
+  window.location.href = "https://frbconsultoria.com.br"
+}
+  
   return (
     <>
       <ToastContainer
