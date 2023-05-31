@@ -21,20 +21,37 @@ export const Main = styled.main`
     width: 100%;
     height: 100%;
   }
-
+  @keyframes opacity {
+    0% {
+        opacity: 0;
+        transform: matrix(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: matrix(0);
+    }
+  }
   .handsImg {
     width: 100%;
     height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    
+    div{
+      
+      width: 100%;
+      height: 100%;
+    }
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      
     }
-    animation: opacity 2s ;
+    
   }
 
   .whyFRB {
