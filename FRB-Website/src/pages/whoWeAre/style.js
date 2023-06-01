@@ -21,26 +21,15 @@ export const Main = styled.main`
     width: 100%;
     height: 100%;
   }
-  @keyframes opacity {
-    0% {
-        opacity: 0;
-        transform: matrix(-100%);
-    }
-    100% {
-        opacity: 1;
-        transform: matrix(0);
-    }
-  }
+
   .handsImg {
     width: 100%;
     height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    
-    div{
-      
+
+    div {
       width: 100%;
       height: 100%;
     }
@@ -49,9 +38,7 @@ export const Main = styled.main`
       width: 100%;
       height: 100%;
       object-fit: cover;
-      
     }
-    
   }
 
   .whyFRB {
@@ -142,10 +129,10 @@ export const Main = styled.main`
       }
     }
 
-    li:hover{
-        transition: 0.2s;
-        box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.9);
-        transform: translatey(-16px);
+    li:hover {
+      transition: 0.2s;
+      box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.9);
+      transform: translatey(-16px);
     }
   }
 
@@ -153,8 +140,13 @@ export const Main = styled.main`
     section {
       max-width: 1440px;
     }
-    .handsImg {
+    .slider{
       height: 800px;
+      .slides{
+        .navigation-manual, .navigation-auto{
+          margin-top: 750px;
+        }
+      }
     }
     .whyFRB {
       height: 300px;
@@ -211,5 +203,4 @@ export const Main = styled.main`
       }
     }
   }
-
 `;

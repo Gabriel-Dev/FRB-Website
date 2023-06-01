@@ -19,10 +19,13 @@ export const ResetPassword = () => {
   const [token, setToken] = useState(false);
   const [eye, setEye] = useState(true);
   const navigate = useNavigate()
-  const email = params.email;
+
+  const id = params.id;
 
   useEffect(() => {
     const login = async () => {
+      const users = await api.get("users/")
+      const email = users.data.results.find((user)=>user.id==id).email
       const response = await api.post("users/login/", {
         username: email,
         password: email,
@@ -53,7 +56,6 @@ export const ResetPassword = () => {
       navigate("/areadocliente")
     } catch (err) {
       console.log(err);
-      console.log("teste")
       notifyError("Não foi possível alterar a senha")
     } 
   };

@@ -31,6 +31,9 @@ svg{
       display: flex;
       flex-direction: column;
       gap: 16px;
+      h3{
+        margin: 16px 0 0 0;
+      }
       a {
         font-weight: 400px;
         width: 200px;

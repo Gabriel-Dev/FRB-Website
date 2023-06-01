@@ -1,9 +1,6 @@
 import { Main } from "./style";
 import { Header } from "../../components/header";
 import { Footer } from "../../components/Footer";
-import hands from "../../assets/img/hands.png";
-import tech from "../../assets/img/tech.png";
-import backhgroundslide from "../../assets/img/backhgroundslide.png";
 import father from "../../assets/img/father.png";
 import stethoscope from "../../assets/img/stethoscope.png";
 import management from "../../assets/img/management.png";
@@ -11,46 +8,15 @@ import selfManagement from "../../assets/img/selfManagement.png";
 import apart from "../../assets/img/apart.png";
 import BI from "../../assets/img/BI.png";
 import medic from "../../assets/img/medic.png";
-import { useState, useEffect } from 'react';
+import { SlideShow } from "../../components/Slider";
+import { useEffect, useState, useRef } from "react";
 
 export const WhoWeAre = () => {
-  const [currentState, setCurrentState] = useState("");
-  const SlideShow = ({ images }) => {
-    const [currentImage, setCurrentImage] = useState(0);
-   
-  
-    useEffect(() => {
-      const interval = setInterval(() => {
-        setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-      }, 5000);
-  
-      return () => clearInterval(interval);
-    }, [images]);
-  
-    return (
-      <div>
-        <img src={images[currentImage]} alt="Slide" />
-      </div>
-    );
-  };
-const images = [
-  hands,tech,backhgroundslide
-]
-// console.log("37",hands)
-// console.log("38",tech)
-// console.log("39",backhgroundslide)
-// console.log("40", images)
-
   return (
     <>
       <Header />
       <Main>
-     
-        <div className="handsImg opacity">
-        <SlideShow images={images} />
-          
-        </div>
-        {/* {images.map(e=>(e == "/src/assets/img/hands.png"?setCurrentState("class1"):e == "/src/assets/img/tech.png"?setCurrentState("class2"):setCurrentState("class3")))} */}
+          <SlideShow/>
         <section>
           <div className="whyFRB slideLeft">
             <h3>Por que a FRB?</h3>
