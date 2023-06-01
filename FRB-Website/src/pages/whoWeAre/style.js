@@ -21,26 +21,19 @@ export const Main = styled.main`
     width: 100%;
     height: 100%;
   }
-  @keyframes opacity {
-    0% {
-        opacity: 0;
-        transform: matrix(-100%);
-    }
-    100% {
-        opacity: 1;
-        transform: matrix(0);
-    }
+  .observer{
+    width: 100%;
+    height: 100%;
   }
+
   .handsImg {
     width: 100%;
     height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    
-    div{
-      
+
+    div {
       width: 100%;
       height: 100%;
     }
@@ -49,9 +42,7 @@ export const Main = styled.main`
       width: 100%;
       height: 100%;
       object-fit: cover;
-      
     }
-    
   }
 
   .whyFRB {
@@ -77,14 +68,15 @@ export const Main = styled.main`
 
   .fatherImg {
     width: 100%;
-    height: 150px;
+    height: 160px;
     background-color: var(--color-primary-3);
-    margin-top: 32px;
+    margin-top: 64px;
     position: relative;
+    
 
     div {
       width: 100%;
-      height: 180px;
+      height: 190px;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -142,10 +134,10 @@ export const Main = styled.main`
       }
     }
 
-    li:hover{
-        transition: 0.2s;
-        box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.9);
-        transform: translatey(-16px);
+    li:hover {
+      transition: 0.2s;
+      box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.9);
+      transform: translatey(-16px);
     }
   }
 
@@ -153,8 +145,13 @@ export const Main = styled.main`
     section {
       max-width: 1440px;
     }
-    .handsImg {
+    .slider{
       height: 800px;
+      .slides{
+        .navigation-manual, .navigation-auto{
+          margin-top: 750px;
+        }
+      }
     }
     .whyFRB {
       height: 300px;
@@ -211,5 +208,4 @@ export const Main = styled.main`
       }
     }
   }
-
 `;

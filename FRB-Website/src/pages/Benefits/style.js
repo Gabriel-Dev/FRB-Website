@@ -32,6 +32,9 @@ object-fit: cover;
     position: relative;
     bottom: 5px;
   }
+  .container{
+    width: 100%;
+  }
   .positionDental {
     padding: 35px;
   }
@@ -95,6 +98,7 @@ object-fit: cover;
   .widthbox {
     width: 250px;
   }
+
   .boxBlue {
     background-color: var(--color-primary-3);
     width: 100%;

@@ -8,6 +8,6 @@ export function ProtectRoutes() {
   if (loading) {
     return null;
   }
-
+  
   return user ? <Outlet /> : <Navigate to="/" />
 }

@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { WhoWeAre } from "../pages/WhoWeAre";
+import { WhoWeAre } from "../pages/whoWeAre";
 import { OurDifferential } from "../pages/OurDifferential";
 import { Benefits } from "../pages/Benefits";
 import { Contact } from "../pages/Contact";
@@ -21,7 +21,7 @@ export const MainRoutes = () => {
       <Route path="contato" element={<Contact />} />
       <Route path="contato/obrigadopelocontato" element={<Thanks />} />
       <Route path="areadocliente" element={<CustomerArea />} />
-      <Route path="redefinirsenha/:email" element={<ResetPassword />} />
+      <Route path="redefinirsenha/:id" element={<ResetPassword />} />
       <Route element={<ProtectRoutes />}>
         <Route path="user" element={<User />} />
         <Route element={<MyAdminProvider/>}>

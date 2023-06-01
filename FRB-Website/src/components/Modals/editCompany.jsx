@@ -36,7 +36,7 @@ export const EditCompanyModal = ({ client }) => {
     <EditCompany>
       <ModalBackground size="editCompany">
         <div>
-          <form onSubmit={handleSubmit((body)=>{updateClient(body, client.id)})}>
+          <form onSubmit={handleSubmit((body)=>{updateClient(body, client.id, "Atualizar")})}>
             <Input
               name="client_name"
               type="text"

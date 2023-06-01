@@ -1,9 +1,6 @@
 import { Main } from "./style";
 import { Header } from "../../components/header";
 import { Footer } from "../../components/Footer";
-import hands from "../../assets/img/hands.png";
-import tech from "../../assets/img/tech.png";
-import backhgroundslide from "../../assets/img/backhgroundslide.png";
 import father from "../../assets/img/father.png";
 import stethoscope from "../../assets/img/stethoscope.png";
 import management from "../../assets/img/management.png";
@@ -11,71 +8,61 @@ import selfManagement from "../../assets/img/selfManagement.png";
 import apart from "../../assets/img/apart.png";
 import BI from "../../assets/img/BI.png";
 import medic from "../../assets/img/medic.png";
-import { useState, useEffect } from 'react';
+import { SlideShow } from "../../components/Slider";
+import { useRef } from "react";
+import { ObservedItem } from "../../components/Observer";
 
 export const WhoWeAre = () => {
-  const [currentState, setCurrentState] = useState("");
-  const SlideShow = ({ images }) => {
-    const [currentImage, setCurrentImage] = useState(0);
-   
-  
-    useEffect(() => {
-      const interval = setInterval(() => {
-        setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-      }, 5000);
-  
-      return () => clearInterval(interval);
-    }, [images]);
-  
-    return (
-      <div>
-        <img src={images[currentImage]} alt="Slide" />
-      </div>
-    );
-  };
-const images = [
-  hands,tech,backhgroundslide
-]
-// console.log("37",hands)
-// console.log("38",tech)
-// console.log("39",backhgroundslide)
-// console.log("40", images)
+  const whyFRB = useRef(false)
+  const fatherImg = useRef(false)
+  const text = useRef(false)
 
   return (
     <>
       <Header />
       <Main>
-     
-        <div className="handsImg opacity">
-        <SlideShow images={images} />
-          
-        </div>
-        {/* {images.map(e=>(e == "/src/assets/img/hands.png"?setCurrentState("class1"):e == "/src/assets/img/tech.png"?setCurrentState("class2"):setCurrentState("class3")))} */}
+        <SlideShow />
         <section>
-          <div className="whyFRB slideLeft">
-            <h3>Por que a FRB?</h3>
-            <div>
-              <p>
-                Nossa reputação sólida e expertise no setor são fundamentais
-                para construir confiança.
-              </p>
-              <p>
-                Ao longo dos anos, estabelecemos um nome de confiança como
-                provedores de serviços de proteção financeira.
-              </p>
-              <p>
-                Quando você escolhe nossa empresa, você escolhe a tranquilidade
-                de saber que seus beneficiários estaram protegidos por uma
-                equipe experiente e dedicada.
-              </p>
+          <ObservedItem
+            onVisible={() => {
+              whyFRB.current.className="whyFRB slideLeft"
+            }}
+          >
+            <div ref={whyFRB} className="none">
+              <h3>Por que a FRB?</h3>
+              <div>
+                <p>
+                  Nossa reputação sólida e expertise no setor são fundamentais
+                  para construir confiança.
+                </p>
+                <p>
+                  Ao longo dos anos, estabelecemos um nome de confiança como
+                  provedores de serviços de proteção financeira.
+                </p>
+                <p>
+                  Quando você escolhe nossa empresa, você escolhe a
+                  tranquilidade de saber que seus beneficiários estaram
+                  protegidos por uma equipe experiente e dedicada.
+                </p>
+              </div>
             </div>
-          </div>
+          </ObservedItem>
         </section>
-        <div className="fatherImg slideRight">
-          <div>
-            <img src={father} alt="imagem pai e filha" />
-            <p>Nossa prioridade é o seu bem-estar.</p>
-          </div>
+        <div className="fatherImg">
+          <ObservedItem
+            onVisible={() => {
+              fatherImg.current.className="slideRight"
+              text.current.className="slideLeft"
+            }}
+          >
+            <img className="none" ref={fatherImg}
+              src={father}
+              alt="imagem pai e filha"
+            />
+            <p className="none" ref={text}>
+              Nossa prioridade é o seu bem-estar.
+            </p>
+          </ObservedItem>
         </div>
         <section>
           <ul className="cardList">
