@@ -1,6 +1,6 @@
 import { SelectStyle } from "./styled";
 
-export const Select = ({register}) => {
+export const Select = ({register, required}) => {
   const states = [
     { sigla: 'AC', nome: 'Acre' },
     { sigla: 'AL', nome: 'Alagoas' },
@@ -32,7 +32,7 @@ export const Select = ({register}) => {
   ];
 
   return (
-    <SelectStyle name="state" {...register}>
+    <SelectStyle required={required} name="state" {...register}>
       <option value="">--</option>
       {states.map((state) => (
         <option key={state.sigla} value={state.sigla}>
