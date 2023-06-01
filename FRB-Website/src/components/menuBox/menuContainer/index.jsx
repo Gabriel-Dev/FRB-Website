@@ -1,5 +1,5 @@
 import { MenuStyle } from "./styled";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ModalBenefits } from "../../header/ModalBenefits";
 import { MdArrowDropDown } from "react-icons/md";
 import { MdArrowDropUp } from "react-icons/md";
@@ -7,6 +7,7 @@ import { MdArrowDropUp } from "react-icons/md";
 import { useState, useEffect } from "react";
 
 export const MenuContainer = () => {
+  const navigate = useNavigate()
   const [benefitsBolean, setBenefitsBoelean] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
@@ -44,17 +45,17 @@ export const MenuContainer = () => {
         Nosso diferencial
       </Link>
       <div className="relativeModal">
-        <Link
+        <span
           className="positionBenefits"
           onClick={() => {
             openModal()
             windowWidth < 768 ? window.scrollTo(0, 0) : null;
+            {windowWidth < 768 ? navigate("/beneficios") : null}
           }}
-          to={windowWidth < 768 ? "/beneficios" : null}
         >
           Benefícios {windowWidth < 768 ? "" : benefitsBolean?<MdArrowDropUp/>:<MdArrowDropDown />}{" "}
           {benefitsBolean ? <ModalBenefits /> : ""}
-        </Link>
+        </span>
       </div>
 
       <Link

@@ -7,11 +7,11 @@ export const MenuStyle = styled.div`
   justify-content: flex-end;
   gap: 24px;
   padding: 32px 16px;
-  a {
+  a, span {
     font-weight: 600;
     font-family: "Montserrat", sans-serif;
   }
-  a:hover {
+  span:hover, a:hover {
     color: var(--color-primary-2);
     transition: 0.2s;
         transform: translatey(-2px);
