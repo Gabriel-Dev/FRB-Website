@@ -3,8 +3,7 @@ import styled from "styled-components";
 export const Main = styled.main`
   background-color: var(--color-primary-1);
   width: 100%;
-  height: max-content;
-  min-width: 404px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -100,9 +99,13 @@ export const Main = styled.main`
     font-size: 36px;
     font-weight: 700;
     color: var(--color-white-1);
-    padding: 55px;
+   width: 55%;
   }
- 
+ .this{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+ }
   .positionEye {
     position: relative;
     svg {
@@ -168,7 +171,7 @@ export const Main = styled.main`
       gap: 20px;
       width: 100%;
     }
-    min-width: 905px;
+    /* min-width: 905px; */
   }
   .textLogin {
     font-size: 24px;

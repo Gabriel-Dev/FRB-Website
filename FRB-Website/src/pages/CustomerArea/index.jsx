@@ -91,7 +91,7 @@ export const CustomerArea = () => {
               </div>
             </div>
           </div>
-          <div className="positionDeskText">
+          <div className="positionDeskText this">
             <p className="textFooter slideRight">
               Monitore a performance dos seus contratos
             </p>
