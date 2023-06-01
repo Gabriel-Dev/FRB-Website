@@ -1,6 +1,6 @@
 import axios from "axios";
 
 export const api = axios.create({
-    baseURL: "http://3.138.134.113/api/",
+    baseURL: "https://frbseguros.com.br",
     timeout: 5000
 })
