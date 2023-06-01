@@ -9,39 +9,60 @@ import apart from "../../assets/img/apart.png";
 import BI from "../../assets/img/BI.png";
 import medic from "../../assets/img/medic.png";
 import { SlideShow } from "../../components/Slider";
-import { useEffect, useState, useRef } from "react";
+import { useRef } from "react";
+import { ObservedItem } from "../../components/Observer";
 
 export const WhoWeAre = () => {
+  const whyFRB = useRef(false)
+  const fatherImg = useRef(false)
+  const text = useRef(false)
+
   return (
     <>
       <Header />
       <Main>
-          <SlideShow/>
+        <SlideShow />
         <section>
-          <div className="whyFRB slideLeft">
-            <h3>Por que a FRB?</h3>
-            <div>
-              <p>
-                Nossa reputação sólida e expertise no setor são fundamentais
-                para construir confiança.
-              </p>
-              <p>
-                Ao longo dos anos, estabelecemos um nome de confiança como
-                provedores de serviços de proteção financeira.
-              </p>
-              <p>
-                Quando você escolhe nossa empresa, você escolhe a tranquilidade
-                de saber que seus beneficiários estaram protegidos por uma
-                equipe experiente e dedicada.
-              </p>
+          <ObservedItem
+            onVisible={() => {
+              whyFRB.current.className="whyFRB slideLeft"
+            }}
+          >
+            <div ref={whyFRB} className="none">
+              <h3>Por que a FRB?</h3>
+              <div>
+                <p>
+                  Nossa reputação sólida e expertise no setor são fundamentais
+                  para construir confiança.
+                </p>
+                <p>
+                  Ao longo dos anos, estabelecemos um nome de confiança como
+                  provedores de serviços de proteção financeira.
+                </p>
+                <p>
+                  Quando você escolhe nossa empresa, você escolhe a
+                  tranquilidade de saber que seus beneficiários estaram
+                  protegidos por uma equipe experiente e dedicada.
+                </p>
+              </div>
             </div>
-          </div>
+          </ObservedItem>
         </section>
-        <div className="fatherImg slideRight">
-          <div>
-            <img src={father} alt="imagem pai e filha" />
-            <p>Nossa prioridade é o seu bem-estar.</p>
-          </div>
+        <div className="fatherImg">
+          <ObservedItem
+            onVisible={() => {
+              fatherImg.current.className="slideRight"
+              text.current.className="slideLeft"
+            }}
+          >
+            <img className="none" ref={fatherImg}
+              src={father}
+              alt="imagem pai e filha"
+            />
+            <p className="none" ref={text}>
+              Nossa prioridade é o seu bem-estar.
+            </p>
+          </ObservedItem>
         </div>
         <section>
           <ul className="cardList">

@@ -1,16 +1,13 @@
 import styled from "styled-components";
 export const Main = styled.main`
   height: 100%;
-  
- 
+
   img {
     width: 100%;
     height: 250px;
     object-fit: cover;
   }
   
- 
-
   .view {
     color: var(--color-white-1);
     font-size: 32px;
@@ -26,10 +23,12 @@ export const Main = styled.main`
     flex-direction: column;
     gap: 20px;
     padding: 20px;
+    width: 100%;
   }
   .imgCard {
-    position: relative;
-    top: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .purple {
     color: var(--color-purple);
@@ -47,14 +46,9 @@ export const Main = styled.main`
     .positionCard {
       display: flex;
       width: 100%;
-    }
-    .imgCard {
-      position: relative;
-      bottom: 2%;
       height: 400px;
-      width: 50%;
-      top: 0px;
     }
+   
     .positionImg {
       width: 100%;
       height: 245px;
@@ -71,7 +65,7 @@ export const Main = styled.main`
       flex-direction: row-reverse;
     }
     .positionText {
-      width: 50%;
+      width: 100%;
 
       gap: 0;
       display: flex;
