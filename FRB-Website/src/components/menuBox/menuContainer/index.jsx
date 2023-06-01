@@ -2,6 +2,8 @@ import { MenuStyle } from "./styled";
 import { Link } from "react-router-dom";
 import { ModalBenefits } from "../../header/ModalBenefits";
 import { MdArrowDropDown } from "react-icons/md";
+import { MdArrowDropUp } from "react-icons/md";
+
 import { useState, useEffect } from "react";
 
 export const MenuContainer = () => {
@@ -24,7 +26,7 @@ export const MenuContainer = () => {
     }
   };
   return (
-    <MenuStyle>
+    <MenuStyle onClick={()=>benefitsBolean?setBenefitsBoelean(false):null }>
       <Link
         onClick={() => {
           window.scrollTo(0, 0);
@@ -50,7 +52,7 @@ export const MenuContainer = () => {
           }}
           to={windowWidth < 768 ? "/beneficios" : null}
         >
-          Benefícios {windowWidth < 768 ? "" : <MdArrowDropDown />}{" "}
+          Benefícios {windowWidth < 768 ? "" : benefitsBolean?<MdArrowDropUp/>:<MdArrowDropDown />}{" "}
           {benefitsBolean ? <ModalBenefits /> : ""}
         </Link>
       </div>

@@ -6,42 +6,15 @@ import life from "../../assets/img/IconLife.png";
 import health from "../../assets/img/IconHealth.png";
 import tooth from "../../assets/img/IconTooth.png";
 import iconLifeBlue from "../../assets/img/iconLifeBlue.png";
-import mp4videobenefics from "../../assets/img/mp4videobenefics.mp4"
-import { useContext } from "react";
-import { UserContext } from "../../contexts/userContext/userContext";
-import { useState, useEffect } from "react"
 export const Benefits = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [autoplay, setAutoplay] = useState(false);
-  
-  
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => {
-    window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-  
-  useEffect(() => {
-    if (windowWidth > 765) {
-      setAutoplay(true);
-      
-    } else {
-      setAutoplay(false);
-      
-    }
-  }, [windowWidth]);
-  console.log(windowWidth)
+
     
   return (
     <>
       <Header />
       <Main>
         <div className="positionTextInto" >
-          {autoplay?<video autoPlay={autoplay} loop muted src={mp4videobenefics}></video>:<img className="imgIntro opacity" src={intro} alt="Introdução a página" />}
+         <img className="imgIntro opacity" src={intro} alt="Introdução a página" />
           
             
           <p className="textIntro scale">Englobado os seguintes Benefícios</p>
