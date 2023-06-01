@@ -1,44 +1,15 @@
 import styled from "styled-components";
 export const Main = styled.main`
   height: 100%;
-  .positionView {
-    position: relative;
-    svg {
-      color: var(--color-white-1);
-      font-size: 60px;
-
-      text-align: center;
-    }
-  }
-  video {
-    width: 100%;
-    margin-bottom: -4px;
-    object-fit: cover;
-  }
+  
+ 
   img {
     width: 100%;
     height: 250px;
     object-fit: cover;
   }
-  .positionView {
-    position: relative;
-    svg {
-      color: var(--color-white-1);
-      font-size: 60px;
-
-      text-align: center;
-    }
-  }
-  .positionIconP {
-    gap: 20px;
-    position: absolute;
-    top: 20%;
-    right: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    display: none;
-  }
+  
+ 
 
   .view {
     color: var(--color-white-1);
