@@ -8,9 +8,9 @@ import { useForm } from "react-hook-form";
 import { createUserSchema } from "../../schemas"
 import { yupResolver } from "@hookform/resolvers/yup";
 
+
 export const CreateClientModal = ({client_id}) => {
   const { createUser } = useContext(AdminContext);
-
   const {
     register,
     handleSubmit,
@@ -24,7 +24,7 @@ export const CreateClientModal = ({client_id}) => {
     <CreateClient>
       <ModalBackground size="createClient">
         <div>
-          <form onSubmit={handleSubmit((body)=>{createUser(body,client_id)})}>
+          <form onSubmit={handleSubmit((body)=>{createUser(body,client_id, "Criar")})}>
             <Input
               name="name"
               type="text"
@@ -69,7 +69,7 @@ export const CreateClientModal = ({client_id}) => {
                 {errors.description && <p className="error">{errors.description.message}</p>}
             </label>
             <div>
-              <Button type="submit" name="Criar"></Button>
+              <Button type="submit" name="Criar" ></Button>
             </div>
           </form>
         </div>

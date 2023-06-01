@@ -4,7 +4,7 @@ import { notifyError, notifySucess } from "../../Toastfy";
 import { useNavigate } from "react-router-dom";
 import { api } from "../../services/api";
 import "react-toastify/dist/ReactToastify.css";
-import jwt_decode from 'jwt-decode';
+import jwt_decode from "jwt-decode";
 
 export const UserContext = createContext({});
 
@@ -13,28 +13,34 @@ export const UserProvider = ({ children }) => {
   const [CompanyModal, setCompanyModal] = useState(false);
   const [ClientModal, setClientModal] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [spinner, setSpinner] = useState(false);
   const [userInfo, setUserInfo] = useState("");
   const [observer, setObserver] = useState("");
   const navigate = useNavigate();
 
   const handleForm = async (body) => {
     try {
+      setSpinner("Entrar")
       const response = await api.post("users/login/", body);
-      const decodedToken = jwt_decode(response.data.access)
+      const decodedToken = jwt_decode(response.data.access);
       window.localStorage.clear();
-      window.localStorage.setItem("@token",
-      JSON.stringify(response.data.access));
-      setUserInfo(decodedToken)
-      
-      
-      decodedToken.user_level == 'admin'? 
-      navigate("/admin") : navigate("/user")
-      
-      setLoading(true);
+      window.localStorage.setItem(
+        "@token",
+        JSON.stringify(response.data.access)
+        );
+        setUserInfo(decodedToken);
+        
+        decodedToken.user_level == "admin"
+        ? navigate("/admin")
+        : navigate("/user");
+        
+      setLoading(true)
       notifySucess("Logado com sucesso!");
     } catch (err) {
       console.log(err);
       notifyError("Email ou senha invalida!");
+    } finally{
+      setSpinner(false)
     }
   };
 
@@ -46,14 +52,13 @@ export const UserProvider = ({ children }) => {
         setLoading(false);
         return;
       }
-      
-      const userId =  jwt_decode(token).user_id 
+
+      const userId = jwt_decode(token).user_id;
 
       try {
-        api.defaults.headers.common["Authorization"] = `Bearer ${token}`
+        api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
         const response = await api.get(`users/${userId}/`);
         setUser(response.data);
-
       } catch (err) {
         console.log(err);
       } finally {
@@ -76,8 +81,11 @@ export const UserProvider = ({ children }) => {
         ClientModal,
         setClientModal,
         navigate,
-        userInfo,observer, 
-        setObserver
+        userInfo,
+        observer,
+        setObserver,
+        spinner, 
+        setSpinner
       }}
     >
       {children}

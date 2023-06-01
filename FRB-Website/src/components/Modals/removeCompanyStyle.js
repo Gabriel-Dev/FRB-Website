@@ -9,7 +9,7 @@ export const RemoveCompanyStyle = styled.div`
   gap: 16px;
 
   h4{
-    margin-bottom: 16px;
+    padding: 32px;
   }
 
   div{
@@ -25,9 +25,9 @@ export const RemoveCompanyStyle = styled.div`
     }
 
     button{
-      width: max-content;
+      width: 40%;
       height: 32px;
-      background-color: var(--color-grey-05);
+      background-color: var(--color-primary-1);
       color: var(--color-white-1);
     }
 

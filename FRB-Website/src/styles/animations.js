@@ -25,6 +25,11 @@ export const Animations = createGlobalStyle`
     animation: scale 2s;
 }
 
+.spinner{
+  font-size: 18px;
+  animation: snipper 0.8s linear infinite;
+}
+
  @keyframes slideLeft {
     0% {
       transform: translateX(600px);
@@ -80,6 +85,12 @@ export const Animations = createGlobalStyle`
     100% {
         opacity: 1;
         scale: 1;
+    }
+  }
+
+  @keyframes snipper {
+    0% {
+      transform: rotate(-1turn);
     }
   }
 `

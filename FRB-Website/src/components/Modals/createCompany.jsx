@@ -25,7 +25,7 @@ export const CreateCompanyModal = () => {
       <ModalBackground size="createCompany">
         <div>
           <p className="textHeader">Adicionar cliente</p>
-          <form onSubmit={handleSubmit(createClient)}>
+          <form onSubmit={handleSubmit((body)=>createClient(body, "Adicionar"))}>
             <Input
               name="client_name"
               type="text"
