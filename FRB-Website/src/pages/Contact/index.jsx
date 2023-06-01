@@ -27,7 +27,7 @@ export const Contact = () => {
                 type="text"
                 placeholder="Digite seu nome"
                 label="Nome*"
-                required
+                required={true}
               />
 
 
@@ -36,7 +36,7 @@ export const Contact = () => {
                 type="email"
                 placeholder="Digite seu email"
                 label="E-mail*"
-                required
+                required={true}
                 
               />
             </div>
@@ -45,14 +45,14 @@ export const Contact = () => {
                 name="tel"
                 type="tel"
                 placeholder="Digite seu telefone"
-                label="Telefone*"
+                label="Telefone"
                 
               />
               <label>Estado*
-                <Select />
+                <Select required={true} />
               </label>
             </div>
-            <textarea name="description" placeholder="Sobre o que deseja falar?"  ></textarea>
+            <textarea required name="description" placeholder="Sobre o que deseja falar?"  ></textarea>
             <div className="buttonBox">
               <Button type="submit" name="Enviar" />
             </div>
