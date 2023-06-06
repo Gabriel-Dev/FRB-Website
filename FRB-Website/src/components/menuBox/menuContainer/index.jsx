@@ -40,9 +40,9 @@ export const MenuContainer = () => {
         onClick={() => {
           window.scrollTo(0, 0);
         }}
-        to={"/nossodiferencial"}
+        to={"/serviços"}
       >
-        Nosso diferencial
+        Serviços
       </Link>
       <div className="relativeModal">
         <span

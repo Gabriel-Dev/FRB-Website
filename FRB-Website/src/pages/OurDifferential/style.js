@@ -17,7 +17,52 @@ export const Main = styled.main`
     font-family: "Montserrat", sans-serif;
     text-align: center;
   }
-
+.ulList{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  li:hover {
+      transition: 0.2s;
+      box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.9);
+      transform: translatey(-5px);
+    }
+  li{
+    width: 400px;
+    height: max-content;
+    background-color: var(--color-primary-1);
+    border-radius:20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    
+    
+    div{
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+      border-radius:20px;
+      
+      background-color: var(--color-white-1);
+      border:1px solid var(--color-primary-1);
+      width: 100%;
+    p{
+      font-weight:500;
+      display: flex;
+      
+      align-items: center;
+      min-height: 50px;
+    }
+    }
+  }
+  img{
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+  }
+}
   .positionText {
     display: flex;
     flex-direction: column;

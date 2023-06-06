@@ -57,7 +57,7 @@ export const Main = styled.main`
     div {
       display: flex;
       flex-direction: column;
-
+      width: 100%;
       gap: 16px;
 
       p {
@@ -91,7 +91,7 @@ export const Main = styled.main`
     p {
       width: 50%;
       font-weight: 700;
-      font-size: 18px;
+      font-size: 15px;
       position: absolute;
       bottom: 50px;
       right: 0px;
@@ -195,7 +195,7 @@ export const Main = styled.main`
           z-index: 1;
         }
         p {
-          font-size: 36px;
+          font-size: 23px;
           bottom: 120px;
         }
       }

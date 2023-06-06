@@ -16,7 +16,7 @@ export const MainRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<WhoWeAre />} />
-      <Route path="nossodiferencial" element={<OurDifferential />} />
+      <Route path="serviços" element={<OurDifferential />} />
       <Route path="beneficios" element={<Benefits />} />
       <Route path="contato" element={<Contact />} />
       <Route path="contato/obrigadopelocontato" element={<Thanks />} />

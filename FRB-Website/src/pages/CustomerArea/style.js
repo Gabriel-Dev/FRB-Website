@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Main = styled.main`
   background-color: var(--color-primary-1);
   width: 100%;
-  height: 100vh;
+  height: 100 max-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -100,6 +100,8 @@ export const Main = styled.main`
     font-weight: 700;
     color: var(--color-white-1);
    width: 55%;
+   
+   text-align: left;
   }
  .this{
   display:flex;
@@ -176,4 +178,5 @@ export const Main = styled.main`
   .textLogin {
     font-size: 24px;
   }
+ 
 `;

@@ -10,6 +10,7 @@ export const MenuStyle = styled.div`
   a, span {
     font-weight: 600;
     font-family: "Montserrat", sans-serif;
+    cursor: pointer;
   }
   span:hover, a:hover {
     color: var(--color-primary-2);

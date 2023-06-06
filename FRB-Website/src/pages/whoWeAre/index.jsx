@@ -1,7 +1,7 @@
 import { Main } from "./style";
 import { Header } from "../../components/header";
 import { Footer } from "../../components/Footer";
-import father from "../../assets/img/father.png";
+import father from "../../assets/img/apontando2.png";
 import stethoscope from "../../assets/img/stethoscope.png";
 import management from "../../assets/img/management.png";
 import selfManagement from "../../assets/img/selfManagement.png";
@@ -13,9 +13,9 @@ import { useRef } from "react";
 import { ObservedItem } from "../../components/Observer";
 
 export const WhoWeAre = () => {
-  const whyFRB = useRef(false)
-  const fatherImg = useRef(false)
-  const text = useRef(false)
+  const whyFRB = useRef(false);
+  const fatherImg = useRef(false);
+  const text = useRef(false);
 
   return (
     <>
@@ -25,7 +25,7 @@ export const WhoWeAre = () => {
         <section>
           <ObservedItem
             onVisible={() => {
-              whyFRB.current.className="whyFRB slideLeft"
+              whyFRB.current.className = "whyFRB slideLeft";
             }}
           >
             <div ref={whyFRB} className="none">
@@ -33,16 +33,16 @@ export const WhoWeAre = () => {
               <div>
                 <p>
                   Nossa reputação sólida e expertise no setor são fundamentais
-                  para construir confiança.
+                  para construção de relacionamentos. .
                 </p>
                 <p>
                   Ao longo dos anos, estabelecemos um nome de confiança como
-                  provedores de serviços de proteção financeira.
+                  provedores de serviços em gestão.
                 </p>
                 <p>
                   Quando você escolhe nossa empresa, você escolhe a
-                  tranquilidade de saber que seus beneficiários estaram
-                  protegidos por uma equipe experiente e dedicada.
+                  tranquilidade de saber que será atendido por uma equipe
+                  experiente e dedicada.
                 </p>
               </div>
             </div>
@@ -51,16 +51,18 @@ export const WhoWeAre = () => {
         <div className="fatherImg">
           <ObservedItem
             onVisible={() => {
-              fatherImg.current.className="slideRight"
-              text.current.className="slideLeft"
+              fatherImg.current.className = "slideRight";
+              text.current.className = "slideLeft";
             }}
           >
-            <img className="none" ref={fatherImg}
+            <img
+              className="none"
+              ref={fatherImg}
               src={father}
               alt="imagem pai e filha"
             />
             <p className="none" ref={text}>
-              Nossa prioridade é o seu bem-estar.
+            Protegendo com confiança, credibilidade e segurança.
             </p>
           </ObservedItem>
         </div>
@@ -115,6 +117,28 @@ export const WhoWeAre = () => {
                 Acompanhamento de casos clínicos complexos.
               </p>
             </li>
+            {/* <li>
+              <img src={medic} alt="PME" />
+              <h3>PME</h3>
+              <p>
+              Dedicada a fornecer soluções inovadoras e personalizadas, visando o crescimento e sucesso dos nossos clientes..
+              </p>
+            </li>
+            <li>
+              <img src={medic} alt="Empresarial" />
+              <h3>Concierge Médico</h3>
+              <p>
+              Empresa especializada em soluções empresariais abrangentes para impulsionar a eficiência operacional e promover o crescimento sustentável das organizações.
+              </p>
+            </li>
+            <li>
+              <img src={medic} alt="Concierge Médico" />
+              <h3>Concierge Médico</h3>
+              <p>
+                Acolhimento e atendimento humanizado para seus colaboradores.
+                Acompanhamento de casos clínicos complexos.
+              </p>
+            </li> */}
           </ul>
         </section>
       </Main>
