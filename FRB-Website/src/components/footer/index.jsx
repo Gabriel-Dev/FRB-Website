@@ -31,9 +31,9 @@ export const Footer = () => {
             onClick={() => {
               window.scrollTo(0, 0);
             }}
-            to={"/nossodiferencial"}
+            to={"/serviços"}
           >
-            Nosso diferencial
+            Serviços
           </Link>
           <Link
             className="positionBenefits"

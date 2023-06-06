@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react";
 import { SliderStyle } from "./styled";
-import hands from "../../assets/img/hands.png";
-import tech from "../../assets/img/tech.png";
+import hands from "../../assets/img/dados.png";
 import backhgroundslide from "../../assets/img/backhgroundslide.png";
-
+import backgroundTel from "../../assets/img/BackgroundConfiança.png";
+import backgroundHand from "../../assets/img/BackgroundTelemarketing.png";
 export const SlideShow = () => {
-  const images = [hands, tech, backhgroundslide];
+  const images = [backgroundTel, backgroundHand,hands ];
   const radio1 = useRef(null);
   const radio2 = useRef(null);
   const radio3 = useRef(null);
