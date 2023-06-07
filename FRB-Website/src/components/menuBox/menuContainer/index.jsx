@@ -26,6 +26,27 @@ export const MenuContainer = () => {
       setBenefitsBoelean(true);
     }
   };
+  function scrollToSmoothly(pos, time) {
+    const currentPos = window.pageYOffset || document.documentElement.scrollTop;
+    const distance = pos - currentPos;
+    const framesPerSecond = 60;
+    const totalTime =
+      Math.max(0.1, Math.min(Math.abs(distance) / 1000, 0.8)) * time;
+    const increment = distance / (totalTime / (1000 / framesPerSecond));
+
+    let currentPosition = currentPos;
+    let currentTime = 0;
+
+    function animateScroll() {
+      currentTime += 1000 / framesPerSecond;
+      currentPosition += increment;
+      window.scrollTo(0, currentPosition);
+      if (currentTime < totalTime) {
+        requestAnimationFrame(animateScroll);
+      }
+    }
+    animateScroll();
+  }
   return (
     <MenuStyle onClick={()=>benefitsBolean?setBenefitsBoelean(false):null }>
       <Link
@@ -38,13 +59,13 @@ export const MenuContainer = () => {
       </Link>
       <Link
         onClick={() => {
-          window.scrollTo(0, 0);
+          scrollToSmoothly(650,3000);
         }}
         to={"/serviços"}
       >
         Serviços
       </Link>
-      <div className="relativeModal">
+      {/* <div className="relativeModal">
         <span
           className="positionBenefits"
           onClick={() => {
@@ -56,7 +77,7 @@ export const MenuContainer = () => {
           Benefícios {windowWidth < 768 ? "" : benefitsBolean?<MdArrowDropUp/>:<MdArrowDropDown />}{" "}
           {benefitsBolean ? <ModalBenefits /> : ""}
         </span>
-      </div>
+      </div> */}
 
       <Link
         onClick={() => {

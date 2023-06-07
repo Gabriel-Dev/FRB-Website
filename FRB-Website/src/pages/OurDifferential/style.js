@@ -8,15 +8,7 @@ export const Main = styled.main`
     object-fit: cover;
   }
   
-  .view {
-    color: var(--color-white-1);
-    font-size: 32px;
-    width: 300px;
-    padding: 25px;
-    font-weight: 800;
-    font-family: "Montserrat", sans-serif;
-    text-align: center;
-  }
+ 
 .ulList{
   display: flex;
   flex-wrap: wrap;
@@ -94,10 +86,7 @@ export const Main = styled.main`
       height: 400px;
     }
    
-    .positionImg {
-      width: 100%;
-      height: 245px;
-    }
+    
     .purple {
       font-size: 23px;
     }
@@ -127,14 +116,6 @@ export const Main = styled.main`
         text-align: center;
       }
     }
-    .positionIconP {
-      gap: 20px;
-      position: absolute;
-      top: 20%;
-      right: 20%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+    
   }
 `;

@@ -5,6 +5,27 @@ import { GrLinkedinOption } from "react-icons/gr";
 import { Link } from "react-router-dom";
 
 export const Footer = () => {
+  function scrollToSmoothly(pos, time) {
+    const currentPos = window.pageYOffset || document.documentElement.scrollTop;
+    const distance = pos - currentPos;
+    const framesPerSecond = 60;
+    const totalTime =
+      Math.max(0.1, Math.min(Math.abs(distance) / 1000, 0.8)) * time;
+    const increment = distance / (totalTime / (1000 / framesPerSecond));
+
+    let currentPosition = currentPos;
+    let currentTime = 0;
+
+    function animateScroll() {
+      currentTime += 1000 / framesPerSecond;
+      currentPosition += increment;
+      window.scrollTo(0, currentPosition);
+      if (currentTime < totalTime) {
+        requestAnimationFrame(animateScroll);
+      }
+    }
+    animateScroll();
+  }
   const redirectToInstagram = () => {
     window.location.href = "https://www.instagram.com/frbconsultoria_/";
   };
@@ -29,13 +50,13 @@ export const Footer = () => {
           </Link>
           <Link
             onClick={() => {
-              window.scrollTo(0, 0);
+              scrollToSmoothly(650,3000)
             }}
             to={"/serviços"}
           >
             Serviços
           </Link>
-          <Link
+          {/* <Link
             className="positionBenefits"
             onClick={() => {
               window.scrollTo(0, 0);
@@ -43,7 +64,7 @@ export const Footer = () => {
             to={"/beneficios"}
           >
             Benefícios
-          </Link>
+          </Link> */}
           <Link
             onClick={() => {
               window.scrollTo(0, 0);
