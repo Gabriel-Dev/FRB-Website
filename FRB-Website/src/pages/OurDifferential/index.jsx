@@ -23,19 +23,19 @@ import { ObservedItem } from "../../components/Observer";
 import { useRef } from "react";
 
 export const OurDifferential = () => {
-  const text1 = useRef(false);
-  const text2 = useRef(false);
-  const text3 = useRef(false);
-  const text4 = useRef(false);
-  const text5 = useRef(false);
-  const text6 = useRef(false);
+  // const text1 = useRef(false);
+  // const text2 = useRef(false);
+  // const text3 = useRef(false);
+  // const text4 = useRef(false);
+  // const text5 = useRef(false);
+  // const text6 = useRef(false);
 
-  const img1 = useRef(false);
-  const img2 = useRef(false);
-  const img3 = useRef(false);
-  const img4 = useRef(false);
-  const img5 = useRef(false);
-  const img6 = useRef(false);
+  // const img1 = useRef(false);
+  // const img2 = useRef(false);
+  // const img3 = useRef(false);
+  // const img4 = useRef(false);
+  // const img5 = useRef(false);
+  // const img6 = useRef(false);
   return (
     <>
       <Header />
@@ -103,7 +103,7 @@ export const OurDifferential = () => {
           </li>
           
         </ul>
-        <div className="positionCard ">
+        {/* <div className="positionCard ">
           <ObservedItem
             onVisible={() => {
               text1.current.className = "positionText slideRight";
@@ -112,10 +112,7 @@ export const OurDifferential = () => {
             <div ref={text1} className="none">
               <p className="purple">Agilidade</p>
               <p className="article ">
-                Nós entendemos que burocracia e papelada excessiva podem ser
-                fontes de frustração. É por isso que desenvolvemos processos
-                simplificados que garantem a agilidade na contratação do seguro
-                de vida dos seus associados.
+              Nós entendemos que a burocracia e a demora nas respostas podem ser fontes de frustração. É por isso que treinamos nossa equipe para acolher, entender o problema e buscar as soluções mais viáveis e rápidas, com atendimento personalizado.
               </p>
             </div>
           </ObservedItem>
@@ -141,10 +138,7 @@ export const OurDifferential = () => {
             <div ref={text2} className="none">
               <p className="purple">Acessibilidade</p>
               <p className="article">
-                Entendemos que cada indivíduo e empresa possuem necessidades
-                específicas, por isso oferecemos cobertura abrangente e
-                flexíves. Você pode personalizar seu plano para se adequar aos
-                seus objetivos financeiros e garantir uma proteção adequada.
+              Somos acessíveis, estabelecendo canais de contato fáceis e flexíveis!
               </p>
             </div>
           </ObservedItem>
@@ -272,7 +266,7 @@ export const OurDifferential = () => {
               alt="Imagem sobre agilidade"
             />
           </ObservedItem>
-        </div>
+        </div> */}
       </Main>
       <Footer className="footerBox" />
     </>

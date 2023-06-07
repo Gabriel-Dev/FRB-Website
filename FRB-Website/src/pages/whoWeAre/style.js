@@ -21,7 +21,7 @@ export const Main = styled.main`
     width: 100%;
     height: 100%;
   }
-  .observer{
+  .observer {
     width: 100%;
     height: 100%;
   }
@@ -72,7 +72,6 @@ export const Main = styled.main`
     background-color: var(--color-primary-3);
     margin-top: 64px;
     position: relative;
-    
 
     div {
       width: 100%;
@@ -89,11 +88,11 @@ export const Main = styled.main`
     }
 
     p {
-      width: 50%;
+      width: 40%;
       font-weight: 700;
-      font-size: 15px;
+      font-size: 12px;
       position: absolute;
-      bottom: 50px;
+      bottom: 90px;
       right: 0px;
       z-index: 2;
     }
@@ -140,15 +139,79 @@ export const Main = styled.main`
       transform: translatey(-16px);
     }
   }
-
+  .positionH4P {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    background-color:var(--color-primary-1);
+    padding: 20px;
+    h4{
+      
+      color:var(--color-white-1)
+    }
+    p{
+      font-family: "Nunito", sans-serif;
+      font-size: 16px;
+      font-weight:400;
+      
+      color:var(--color-white-1)
+    }
+  }
+  h4{
+      font-family: "Nunito", sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--color-primary-1);
+      width: 100%;
+      text-align: center;
+      border-top: 1px solid var(--color-primary-1);
+    }
+  .positionCard {
+    img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .positionText {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+      width: 100%;
+    }
+    .imgCard {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .purple {
+      color: var(--color-purple);
+      font-size: 17;
+    }
+    .article {
+      font-weight: 300;
+    }
+  }
+.values{
+  background-color:var(--color-primary-1);
+  color:var(--color-white-1);
+ 
+  margin-top:20px;
+}
   @media (min-width: 768px) {
+    .invert {
+      display: flex;
+      flex-direction: row-reverse;
+    }
     section {
       max-width: 1440px;
     }
-    .slider{
+    .slider {
       height: 800px;
-      .slides{
-        .navigation-manual, .navigation-auto{
+      .slides {
+        .navigation-manual,
+        .navigation-auto {
           margin-top: 750px;
         }
       }
@@ -195,9 +258,27 @@ export const Main = styled.main`
           z-index: 1;
         }
         p {
-          font-size: 23px;
-          bottom: 120px;
+          font-size: 28px;
+          bottom: 180px;
         }
+      }
+    }
+    .positionH4P {
+      display: flex;
+      flex-direction: row;
+      
+      p{
+        font-size:19px;
+        padding: 30px;
+        text-align: center;
+        
+      }
+      .separete{
+        border-right:1px solid var(--color-white-1);
+        
+      }
+      .width{
+        width: 100%;
       }
     }
     .cardList {
@@ -207,5 +288,38 @@ export const Main = styled.main`
         max-width: 30%;
       }
     }
+    .positionCard {
+      display: flex;
+      width: 100%;
+      height: 400px;
+      .purple {
+        font-size: 23px;
+      }
+      .article {
+        font-size: 19px;
+        width: 100%;
+      }
+
+      .positionText {
+        width: 100%;
+
+        gap: 0;
+        display: flex;
+      }
+      p {
+        padding: 20px;
+      }
+    }
+    /* .positionH4P{
+      display: flex;
+      h4{
+        border: transparent;
+        border-right:1px solid var(--color-primary-1);
+        border-bottom:1px solid var(--color-primary-1)
+      }
+      p{
+width: 50%;
+      }
+    } */
   }
 `;

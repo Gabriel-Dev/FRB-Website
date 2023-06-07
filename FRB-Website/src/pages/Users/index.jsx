@@ -29,14 +29,14 @@ export const User = () => {
           <img className="imgLogo" src={FRB} alt="Logo da empresa" />
         </div>
       </div>
-      <div className="positionButton">
         <p className="nameUser">Seja bem-vindo {observer.name}!</p>
-        <a href={observer.power_bi_link}>Veja Fullscreen</a>
-      </div>
+        
+      
       <div className="positionBi">
         <iframe
           width="1024"
           height="804"
+          allowfullscreen="false"
           src={observer.power_bi_link}
           frameBorder="0"
         ></iframe>
