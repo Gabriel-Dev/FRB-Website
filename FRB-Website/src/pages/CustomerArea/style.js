@@ -7,7 +7,7 @@ export const Main = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  
   .imglogo {
     width: 160px;
   }
@@ -118,6 +118,7 @@ export const Main = styled.main`
     }
   }
   @media (min-width: 768px) {
+    
     min-height: 100vh;
     .reverse {
       display: flex;
@@ -125,13 +126,15 @@ export const Main = styled.main`
       align-items: center;
       justify-content: center;
       gap: 64px;
+      max-width: 1440px;
+      width: 100%;
     }
     .textFooter {
-      width: 400px;
+      width: 50%;
     }
 
     .positionElipse {
-      width: 40%;
+      width: 50%;
     }
     .elipse {
       width: 500px;
@@ -175,6 +178,7 @@ export const Main = styled.main`
     }
     /* min-width: 905px; */
   }
+  
   .textLogin {
     font-size: 24px;
   }

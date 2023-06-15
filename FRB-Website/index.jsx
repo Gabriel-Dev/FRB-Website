@@ -1,11 +1,11 @@
 import { Header } from "../../components/header";
 import { Footer } from "../../components/Footer";
 import { Main } from "./style";
-import intro from "../../assets/img/introBenefits.png";
-import life from "../../assets/img/IconLife.png";
-import health from "../../assets/img/IconHealth.png";
-import tooth from "../../assets/img/IconTooth.png";
-import iconLifeBlue from "../../assets/img/iconLifeBlue.png";
+import intro from "../../assets/img/introBenefits.webp";
+import life from "../../assets/img/IconLife.webp";
+import health from "../../assets/img/IconHealth.webp";
+import tooth from "../../assets/img/IconTooth.webp";
+import iconLifeBlue from "../../assets/img/iconLifeBlue.webp";
 
 export const Benefits = () => {
   return (

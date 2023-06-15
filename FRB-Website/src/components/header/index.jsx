@@ -1,5 +1,5 @@
 import { HeaderStyle } from "./styled";
-import logo from "../../assets/img/FRB.png"
+import logo from "../../assets/img/FRB.webp"
 import { MenuBox } from "../menuBox"
 import { MenuContainer } from "../menuBox/menuContainer"
 import { useState, useEffect } from "react"

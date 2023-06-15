@@ -1,6 +1,6 @@
 import { Main } from "./style";
-import FRB from "../../assets/img/logoBranca.png";
-import backLogin from "../../assets/img/IconBackPage.png";
+import FRB from "../../assets/img/logoBranca.webp";
+import backLogin from "../../assets/img/IconBackPage.webp";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 import { useContext } from "react";

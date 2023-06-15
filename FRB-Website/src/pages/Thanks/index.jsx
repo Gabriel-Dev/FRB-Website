@@ -1,6 +1,6 @@
 import {Main} from "./style"
 
-import FRB from "../../assets/img/logoBranca.png";
+import FRB from "../../assets/img/logoBranca.webp";
 import { Link } from "react-router-dom";
 export const Thanks = () =>{
     return(<Main>

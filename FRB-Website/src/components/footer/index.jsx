@@ -1,5 +1,5 @@
 import { FooterStyle } from "./styled";
-import logo from "../../assets/img/FRB.png";
+import logo from "../../assets/img/FRB.webp";
 import { GrInstagram } from "react-icons/gr";
 import { GrLinkedinOption } from "react-icons/gr";
 import { Link } from "react-router-dom";

@@ -1,5 +1,5 @@
 import { Main } from "./style";
-import FRB from "../../assets/img/FRB.png";
+import FRB from "../../assets/img/FRB.webp";
 import { BsArrowLeftCircle } from "react-icons/bs";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";

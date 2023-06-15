@@ -1,24 +1,24 @@
 import { Main } from "./style";
 import { Header } from "../../components/header";
 import { Footer } from "../../components/Footer";
-import father from "../../assets/img/apontando2.png";
-import stethoscope from "../../assets/img/stethoscope.png";
-import management from "../../assets/img/management.png";
-import selfManagement from "../../assets/img/selfManagement.png";
-import apart from "../../assets/img/apart.png";
-import BI from "../../assets/img/BI.png";
-import medic from "../../assets/img/medic.png";
+import father from "../../assets/img/apontando2.webp";
+import stethoscope from "../../assets/img/stethoscope.webp";
+import management from "../../assets/img/management.webp";
+import selfManagement from "../../assets/img/selfManagement.webp";
+import apart from "../../assets/img/apart.webp";
+import BI from "../../assets/img/BI.webp";
+import medic from "../../assets/img/medic.webp";
 import { SlideShow } from "../../components/Slider";
 import { useRef } from "react";
 import { ObservedItem } from "../../components/Observer";
 import { BsChevronDoubleDown } from "react-icons/bs";
-import agility from "../../assets/img/agiliserv.png";
-import flexibility from "../../assets/img/flexibility.png";
-import simplicity from "../../assets/img/simplicity.png";
-import acessiblitypic from "../../assets/img/acessiblitypic.png";
-import technology from "../../assets/img/relacion.png";
-import zeal from "../../assets/img/excelencia.png";
-import proactive from "../../assets/img/proactive.png";
+import agility from "../../assets/img/agiliserv.webp";
+import flexibility from "../../assets/img/flexibility.webp";
+import simplicity from "../../assets/img/simplicity.webp";
+import acessiblitypic from "../../assets/img/acessiblitypic.webp";
+import technology from "../../assets/img/relacion.webp";
+import zeal from "../../assets/img/excelencia.webp";
+import proactive from "../../assets/img/proactive.webp";
 
 export const WhoWeAre = () => {
   const whyFRB = useRef(false);
@@ -53,7 +53,7 @@ export const WhoWeAre = () => {
               <div>
                 <p>
                   Nossa reputação sólida e expertise no setor são fundamentais
-                  para construção de relacionamentos. .
+                  para construção de relacionamentos.
                 </p>
                 <p>
                   Ao longo dos anos, estabelecemos um nome de confiança como

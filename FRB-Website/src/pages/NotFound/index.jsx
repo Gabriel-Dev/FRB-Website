@@ -1,4 +1,4 @@
-import FRB from "../../assets/img/FRB.png";
+import FRB from "../../assets/img/FRB.webp";
 import { StyledNotFound } from "./style";
 import { BiSad } from "react-icons/bi";
 import { Link } from "react-router-dom";

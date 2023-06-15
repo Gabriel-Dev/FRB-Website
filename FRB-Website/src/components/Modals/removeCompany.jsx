@@ -15,7 +15,7 @@ export const RemoveCompanyModal = ({name, client_id}) => {
             <h4>Tem certeza que deseja remover o cliente {name}?</h4>
             <div>
               <span>
-                <Button type="button" name="cancelar" onClick={()=>{setCompanyModal(false)}}/>
+                <Button type="button" name="Cancelar" onClick={()=>{setCompanyModal(false)}}/>
                 <Button type="button" name="Sim, tenho certeza" onClick={()=>{deleteClient(client_id, "Sim, tenho certeza")}} />
               </span>
             </div>
