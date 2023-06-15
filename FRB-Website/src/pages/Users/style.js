@@ -1,6 +1,7 @@
 import styled from "styled-components";
 export const Main = styled.main`
   height: 100vh;
+  overflow:auto;
   .imgLogo {
     width: 160px;
     height: 90;
@@ -41,6 +42,7 @@ export const Main = styled.main`
     font-size: 18px;
     font-weight: 500;
     padding: 0px 0px 0px 30px;
+    margin-bottom:50px;
   }
   iframe {
     width: 100%;
@@ -60,6 +62,5 @@ export const Main = styled.main`
       color: white;
     }
   }
-  @media (min-width: 768px) {
-  }
+  
 `;

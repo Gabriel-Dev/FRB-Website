@@ -8,13 +8,13 @@ export const ModalBackground = ({ children, size }) => {
 
   return (
     <ModalBackgroundStyle className="closeModal"
-      onClick={(e) =>
-        e.target.className.includes("closeModal")
-          ? ClientModal
-            ? setClientModal(false)
-            : setCompanyModal(false)
-          : null
-      }
+      // onClick={(e) =>
+      //   e.target.className.includes("closeModal")
+      //     ? ClientModal
+      //       ? setClientModal(false)
+      //       : setCompanyModal(false)
+      //     : null
+      // }
     >
       <div className={"modal opacity-2 " + size}>
         <span

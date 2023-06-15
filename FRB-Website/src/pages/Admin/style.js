@@ -1,6 +1,6 @@
 import styled from "styled-components";
 export const Main = styled.main`
-  background-image: url("src/assets/img/BackgroundDashboard.png");
+  background-image: url("src/assets/img/BackgroundDashboard.webp");
   background-size: cover;
   background-position:center;
   background-color: var(--color-primary-1);
@@ -70,6 +70,7 @@ export const Main = styled.main`
     }
     
   }
+  
   .positionInput {
     position: relative;
     input {
@@ -104,12 +105,14 @@ export const Main = styled.main`
     padding: 0 16px;
     p,
     span {
-      width: 80px;
+      width: max-content;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 5px;
+     
     }
+  
 
     svg{
       color: var(--color-white-1);
@@ -159,5 +162,21 @@ export const Main = styled.main`
       width: 35%;
     }
   }
+  .positionOption {
+    width: 100%;
+    display: flex;
+    border-left: 2px solid var(--color-white-1);
+    padding: 0 16px;
+    p,
+    span {
+      width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 5px;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+    }
+  
   }
 `

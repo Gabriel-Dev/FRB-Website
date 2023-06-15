@@ -1,6 +1,6 @@
-import IconTooth from "../../../assets/img/iconLifeBlue.png";
-import logoLife from "../../../assets/img/IconBenefits.png";
-import logoHearth from "../../../assets/img/IconBenefits2.png";
+import IconTooth from "../../../assets/img/iconLifeBlue.webp";
+import logoLife from "../../../assets/img/IconBenefits.webp";
+import logoHearth from "../../../assets/img/IconBenefits2.webp";
 import { Modal } from "./styled";
 import { Link } from "react-router-dom";
 export const ModalBenefits = () => {
